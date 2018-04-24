@@ -1,0 +1,110 @@
+/*==================================================
+
+Date: 04-24-2018
+Author: Joseph Davis
+Project: mega-project-hub
+
+==================================================*/
+
+@font-face { font-family: inconsolata; src: url('../files/fonts/Inconsolata-Regular.ttf'); } 
+@font-face { font-family: inconsolataBold; font-weight: bold; src: url('../files/fonts/Inconsolata-Bold.ttf');}
+
+* {
+	position: relative;
+}
+body {
+	background-color: #e8f9ff;
+	font-family: 'inconsolata', 'Courier New', Courier, monospace;
+}
+
+/* Text Aligns */
+	.textAlignCenter {
+		text-align: center;
+	}
+	.textAlignLeft {
+		text-align: left;
+	}
+	.textAlignRight {
+		text-align: right;
+	}
+
+/* SimpleGrid Fixes */
+	[class*='col-'] {
+		padding-right: 0;
+	}
+
+/* Vue.js */
+	[ v-cloak ] {
+		display: none;
+	}
+
+/* Desk */
+	#desk {
+		margin-top: 60px;
+	}
+	/* Computer */
+		#deskComputer .screen {
+			height: 440px;
+			background-color: black;
+			box-shadow: 8px 8px #c3c3c3 inset, -8px -8px #c3c3c3 inset;
+		}
+		#deskComputer .screen iframe {
+			width: calc(100% - 15px);
+			height: calc(100% - 16px);
+			padding: 8px;
+		}
+		#deskComputer .stand {
+			margin: auto;
+			width: 120px;
+			height: 34px;
+			background-color: black;
+		}
+		#deskComputer .stand .button {
+			position: absolute;
+			width: 16px;
+			margin-top: 8px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		#deskComputer .stand .button p {
+			margin: 0;
+			height: 1em;
+			border-radius: 10px;
+		}
+		#deskComputer .stand .button .on {
+			background-color: rgb(0, 153, 255);
+		}
+		#deskComputer .stand .button .off {
+			background-color: red;
+		}
+	/* Board */
+		#deskBoard {
+			padding-top: 30px;
+		}
+		#deskBoard .board {
+			height: 380px;
+			background-color: white;
+			box-shadow: 8px 8px #585858 inset, -8px -8px #585858 inset;
+		}
+		#deskBoard .board .content {
+			position: absolute;
+			margin: 8px;
+			height: calc(100% - 16px);
+			width: calc(100% - 16px);
+		}
+	/* Table */
+		#deskTable {
+			background-color: rgb(180, 137, 112);
+			height: 16px;
+			box-shadow: 0 2px rgb(228, 181, 155) inset;
+		}
+
+/* Print */
+	@media print {
+		#container {
+			display: none;
+		}
+		#printSpan {
+			display: block;
+		}
+	}

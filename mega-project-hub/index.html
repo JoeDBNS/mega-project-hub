@@ -1,0 +1,80 @@
+<!--==================================================
+
+Date: 04-24-2018
+Author: Joseph Davis
+Project: mega-project-hub
+
+===================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>mega-project-hub</title>
+
+<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+
+<!-- SimpleGrid -->
+    <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
+
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refMain.css">
+</head>
+
+<body>
+	<div id="container" class="grid">
+		<div class="col-1-12 hide-on-mobile"><!-- left spacer for #desk --></div>
+		<div id="desk" class="col-10-12">
+			<div id="deskComputer" class="col-2-3">
+				<div class="screen">
+					<iframe src="http://www.CodeDubes.com" frameborder="0" v-show="session.showScreen == 1"></iframe>
+				</div>
+				<div class="stand">
+					<div class="button" v-cloak>
+						<p class="textAlignCenter off" v-show="session.showScreen == 0" @click="session.showScreen = 1"></p>
+						<p class="textAlignCenter on" v-show="session.showScreen == 1" @click="session.showScreen = 0"></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-1-12"></div>
+
+			<div id="deskBoard" class="col-3-12">
+				<div class="board">
+					<div class="content">
+						<p><u>Projects:</u></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-1-12 hide-on-mobile"><!-- right spacer for #desk --></div>
+		
+		<div id="deskTable" class="col-1-1"></div>
+	</div>
+
+	<span id="printSpan" class="textAlignCenter" hidden><br><br><br><br>☠️&nbsp;&nbsp;&nbsp;Don't Print My Website&nbsp;&nbsp;&nbsp;☠️<br><br>👽</span>
+
+
+<!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- SweetAlert2 -->
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+
+<!-- Vue.js -->
+    <!-- <script type="text/javascript" src="js/vue2.min.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+
+<!-- Lodash -->
+    <script src="js/lodash.min.js"></script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refMain.js"></script>
+</body>
+
+</html>
