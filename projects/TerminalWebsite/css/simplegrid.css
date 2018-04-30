@@ -21,9 +21,9 @@
 	padding-right: 20px; /* column-space */
 }
 
-/* [class*='col-'] [class*='col-']:last-child {
+[class*='col-'] [class*='col-']:last-child {
 	padding-right: 0;
-} */
+}
 
 .grid {
 	width: 100%;
@@ -174,10 +174,6 @@
 	margin-left: 8.33%
 }
 
-.show-on-mobile {
-	display: none !important;
-}
-
 @media handheld, only screen and (max-width: 767px) {
 	.grid {
 		width: 100%;
@@ -287,10 +283,6 @@
 		display: none !important;
 		width: 0;
 		height: 0;
-	}
-
-	.show-on-mobile {
-		display: block !important;
 	}
 }
 

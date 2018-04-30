@@ -1,0 +1,65 @@
+input[type=button] {
+    border-radius: 6px;
+    cursor: pointer;
+}
+.listEvents {
+    height: 3em;
+    cursor: default;
+}
+.listEvents:hover {
+    background-color: rgba(146, 86, 86, 0.541);
+}
+#uploader {
+    width: 60%;
+}
+#eventsManageTable_wrapper {
+    background-color: grey;
+    border-radius: 10px;
+    border: 2px groove white;
+    overflow: auto;
+}
+#eventsManageTable_length {
+    display: none;
+}
+#eventsManageTable_filter {
+    padding: 10px;
+}
+#eventsManageTable_filter input {
+    margin-left: 3em;
+    width: 40%;
+}
+#eventsManageTable_info {
+    display: none;
+}
+#eventsManageTable_paginate {
+    display: none;
+}
+.sorting {
+    cursor: pointer;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: rgb(92, 92, 92);
+}
+td {
+    border-top: 1px solid #96caff;
+    padding: 10px;
+}
+#eventAdd input {
+    margin-top: .4em;
+}
+#eventAdd select {
+    margin-top: .4em;
+}
+#eventAdd button {
+    margin-top: .4em;
+}
+#eventAdd textarea {
+    margin-top: .4em;
+}
+.btnEvent {
+    padding: 2px;
+    cursor: pointer;
+}

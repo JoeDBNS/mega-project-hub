@@ -1,0 +1,352 @@
+/* Similar Color Palette */
+/* https://color.adobe.com/Flat-UI-color-theme-2469224/ */
+
+/* Alternative Military Brown Color Palette */
+/* http://www.color-hex.com/color-palette/19633 */
+
+
+/* Simple Grid */
+    [class*='col-'] {
+        padding-right: 0;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        [class*='col-'] {
+            margin: 0;
+        }
+        p {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+        }
+        .event {
+            margin-left: -16px;
+        }
+        .eventLayoutInfo {
+            margin-top: -13px;
+        }
+        .eventLayoutImage .date p {
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+        }
+        .eventLayoutImage .cost p {
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+        }
+    }
+    /* Between Mobile and Normal */
+    @media screen and (min-width: 767px) and (max-width: 1000px) {
+        .midMobile-col-1-2 {
+            width: 50%;
+        }
+    }
+
+/* Pretty Checkbox */
+    .showAllEvents {
+        height: 2em;
+    }
+    .filterEvents {
+        height: 2em;
+        padding-top: 6px;
+    }
+    
+/* Constants */
+    [v-cloak] {
+        display: none;
+    }
+    [v-cloak].loading {
+        display: block;
+    }
+    body {
+        margin: 0;
+        background:
+            linear-gradient(
+                rgba(97, 97, 97, 0.6),
+                rgba(97, 97, 97, 0.6)
+            ), 
+            url("../files/images/Flag_XY.png");
+        font-family: 'Lato', sans-serif;
+        color: white;
+    }
+    .grid {
+        background-color: rgb(9, 113, 178);
+        box-shadow: -1px 0 rgb(170, 170, 170), 1px 0 rgb(170, 170, 170);
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        .grid {
+            box-shadow: none;
+        }
+    }
+    .loading {
+        display: none;
+    }
+    h1 {
+        font-family: 'Pompiere';
+        font-size: 52px;
+        text-shadow: 3px 3px rgb(0, 0, 0);
+    }
+    h2 {
+        font-family: 'Pompiere';
+        font-size: 44px;
+        text-shadow: 3px 3px rgb(0, 0, 0);
+    }
+    h3 {
+        font-family: 'Pompiere';
+        font-size: 36px;
+        text-shadow: 2px 2px rgb(0, 0, 0);
+    }
+    h4 {
+        font-family: 'Pompiere';
+        font-size: 28px;
+        text-shadow: 1px 1px rgb(0, 0, 0);
+    }
+    h5 {
+        font-family: 'Pompiere';
+        font-size: 20px;
+        text-shadow: 1px 1px rgb(0, 0, 0);
+    }
+    .textColorLight {
+        color: lightgrey;
+        font-size: .8rem;
+        height: 1em;
+        padding-top: .1rem;
+    }
+    .noDec, noDec:visited {
+        text-decoration: none;
+        color: white;
+    }
+    .listNoStyle {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .inputField {
+        border-radius: 5px;
+        padding: 6px;
+        text-align: center;
+        background-color: #eff9ff;
+        color: black;
+        border: 1px grey solid;
+    }
+    .inputField::placeholder {
+        color: rgb(163, 163, 163);
+    }
+    .isRequired {
+        border: 1px red solid;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    .pointer {
+        cursor: pointer;
+    }
+    .divHR {
+        margin-top: 3em;
+        display: inline-block;
+        width: 100%;
+    }
+    .event {
+        padding: 30px 0 30px 0;
+    }
+
+/* Text Aligns */
+    .textAlignLeft {
+        text-align: left;
+    }
+    .textAlignCenter {
+        text-align: center;
+    }
+    .textAlignRight {
+        text-align: right;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        .mobile-textAlignLeft {
+            text-align: left;
+        }
+        .mobile-textAlignCenter {
+            text-align: center;
+        }
+        .mobile-textAlignRight {
+            text-align: right;
+        }
+    }
+
+/* Header & Footer */
+    #siteHeader h1 {
+        margin-bottom: 10px;
+    }
+    #siteHeader h2 {
+        margin-top: 0;
+    }
+    #siteFooter {
+        margin-top: 50px;
+    }
+
+/* SWAL Event Pop-up */
+    #swal2-title {
+        font-family: 'Lato', sans-serif;
+        text-shadow: none;
+    }
+    .eventPopupContent {
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        padding: 8px;
+        margin-bottom: 0px;
+        min-height: 2.5em;
+    }
+    .eventPopupContentHeader {
+        margin-top: 10px;
+    }
+    .eventPopupImage {
+        border: 2px solid gray;
+        border-radius: 10px;
+        margin-bottom: 14px;
+    }
+    .eventPopupAddressBuilding {
+        font-size: 1.4em;
+    }
+
+/* Navigation Bar */
+    #navBar {
+        border-top:  1px ridge white;
+        border-bottom:  1px ridge white;
+    }
+    #navBar a {
+        display: block;
+        padding: 10px 0 10px 0;
+    }
+    #navBar a:hover {
+        background-color: rgba(146, 86, 86, 0.541);
+    }
+
+/* Event Style */
+    .eventLayout {
+        overflow: auto;
+        width: 320px;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .eventLayout:hover {
+        box-shadow: 0 0 0 2px #A03A3A;
+    }
+    .eventLayout p {
+        height: 1.2em;
+    }
+    .dateMultiMonth p {
+        margin: 8px;
+    }
+    .eventLayoutInfo {
+        background-color: white;
+        color: black;
+        margin-top: -4px;
+        overflow: auto;
+    }
+    .eventLayoutInfo .name {
+        font-family: 'Lato', sans-serif;
+        text-shadow: none;
+        margin: 16px 0 14px 0;
+        padding: 8px;
+        height: 2rem;
+    }
+    .eventLayoutInfo .city {
+        margin-bottom: 1em;
+    }
+    .eventLayoutImage .date {
+        position: absolute;
+        /* background-color: #a0a0a0; */
+        background-color: #A03A3A;
+        width: 6.5em;
+        border-radius: 10px 0;
+        min-height: 3em;
+    }
+    .eventLayoutImage .cost {
+        position: absolute;
+        margin-left: 248px;
+        /* background-color: #a0a0a0; */
+        background-color: #A03A3A;
+        width: 4.5em;
+        border-radius: 0 10px;
+        min-height: 3em;
+    }
+    /* Upcoming */
+    .eventLayoutUpcoming {
+        width: 335px;
+    }
+    .eventLayoutUpcoming .eventLayoutImage .cost {
+        margin-left: 263px;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        .eventLayoutUpcoming {
+            width: 320px;
+        }
+        .eventLayoutUpcoming .eventLayoutImage .cost {
+            margin-left: 248px;
+        }
+        .eventLayoutUpcoming img {
+            width: 320px;
+            height: 200px;
+        }
+    }
+    /* Today */
+    .eventLayoutToday {
+        width: 400px;
+    }
+    .eventLayoutToday .eventLayoutImage .cost {
+        margin-left: 328px;
+    }
+    .eventLayoutToday img {
+        width: 400px;
+        height: 250px;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        .eventLayoutToday {
+            width: 320px;
+        }
+        .eventLayoutToday .eventLayoutImage .cost {
+            margin-left: 248px;
+        }
+        .eventLayoutToday img {
+            width: 320px;
+            height: 200px;
+        }
+    }
+
+/* Rules, Discounts, and About */
+    #eventsRules ul li {
+        margin-bottom: 3rem;
+    }
+    #eventsRules ul li:last-child {
+        margin-bottom: 0;
+    }
+    #eventsRules ol li {
+        margin-bottom: 1rem;
+    }
+    #eventsDiscounts ul li {
+        margin-bottom: 3rem;
+    }
+    #eventsDiscounts ul li:last-child {
+        margin-bottom: 0;
+    }
+    #eventsDiscounts ol li {
+        margin-bottom: 1rem;
+    }
+    #eventsAbout ul li {
+        margin-bottom: .5rem;
+        list-style: none;
+    }
+    #eventsAbout ul li:last-child {
+        margin-bottom: 0;
+    }
+    #eventsAbout ol li {
+        margin-bottom: 1rem;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        #eventsRules ul {
+            padding: 0 14% 0 14%;
+        }
+        #eventsDiscounts ul {
+            padding: 0 20% 0 20%;
+        }
+    }

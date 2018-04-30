@@ -174,10 +174,6 @@
 	margin-left: 8.33%
 }
 
-.show-on-mobile {
-	display: none !important;
-}
-
 @media handheld, only screen and (max-width: 767px) {
 	.grid {
 		width: 100%;
@@ -288,9 +284,4 @@
 		width: 0;
 		height: 0;
 	}
-
-	.show-on-mobile {
-		display: block !important;
-	}
 }
-

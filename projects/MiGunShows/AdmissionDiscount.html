@@ -1,0 +1,153 @@
+<!--==================================================
+
+Date: 03-6-2018
+Author: Joseph Davis
+Project: www.migunshows.com - REMAKE
+
+===================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Michigan Events Site</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="files/images/Favicon.png" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pompiere" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Pretty Checkbox -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+
+    <!-- SimpleGrid -->
+    <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/Discount.css">
+</head>
+
+<body>
+    <div id="container" class="grid">
+        <div id="siteHeader" class="col-1-1 textAlignCenter">
+            <h1>Michigan Events Example Website</h1>
+            <h2>Admission Discount</h2>
+        </div>
+
+        <div id="navBar" class="grid textAlignCenter">
+            <div class="col-4-12"><a class="noDec" href="index.html">Home</a></div>
+            <div class="col-4-12"><a class="noDec" href="AdmissionDiscount.html">Admission Discounts</a></div>
+            <div class="col-4-12"><a class="noDec" href="#MakeDownloadButton">Dealer Reservation Form</a></div>
+        </div>
+
+        <div id="discountSteps" class="grid textAlignCenter">
+            <h3>Thank you for supporting our shows!</h3>
+            <div class="col-2-12"></div>
+            <ul class="col-8-12 textAlignLeft">
+                <p>To receive a $1.00 off, our regular show admission:</p>
+                <br>
+                <ol>
+                    <li>Enter your Email Address, Name, and Address below.</li>
+                    <li>Click "Send Me A Coupon".</li>
+                    <li>Display the coupon upon show admission entry.
+                        <br>
+                        You may either:
+                        <ul>
+                            <li>Print the coupon email</li>
+                            <li>Display the coupon email on a mobile device</li>
+                        </ul>
+                    </li>
+                </ol>
+                <br>
+                <p>* This coupon is valid only for the one person who received the coupon email.</p>
+            </ul>
+            <div class="col-2-12"></div>
+
+            <div class="divHR">
+                <div class="col-2-12"></div>
+                <div class="col-8-12"><hr></div>
+                <div class="col-2-12"></div>
+            </div>
+
+            <div id="discountForm" class="col-1-1">
+                <div class="col-1-1 textAlignCenter">
+                    <h4>Enter Your Information:</h4>
+
+                    <div class="col-1-3"></div>
+                    <div class="col-1-3">
+                        <input class="col-1-1 inputField isRequired" type="text" v-model="session.name" placeholder="Name"/>
+                        <input class="col-1-1 inputField isRequired" type="email" v-model="session.email" placeholder="Email Address"/>
+                        <input class="col-1-1 inputField isRequired" type="text" v-model="session.address.street" placeholder="Street"/>
+                        <input class="col-1-1 inputField isRequired" type="text" v-model="session.address.city" placeholder="City"/>
+                        <select class="col-1-1 inputField isRequired" name="stateList" id="stateList" v-model="session.address.state">
+                            <option value=""></option>
+                            <option v-for="state in states" v-bind:value="state">{{state}}</option>
+                        </select>
+                        <button @click="addEvent(session)">Send Me A Coupon</button>
+                    </div>
+                    <div class="col-1-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="siteFooter" class="grid textAlignCenter">
+            <div class="col-1-3">
+                <span class="col-1-1">Sitemap</span>
+                <span class="col-1-1">Home</span>
+                <span class="col-1-1">Employee Login</span>
+            </div>
+
+            <div class="col-1-3">
+                <span class="col-1-1">Sport Shows Promotions, Inc.</span>
+                <span class="col-1-1">Lower Michigan Gun Collectors</span>
+                <span class="col-1-1">P.O. Box 404, Mason, MI 48854</span>
+                <span class="col-1-1"><a href="mailto:Sportshows@gmail.com" target="_top">Sportshows@gmail.com</a></span>
+                <span class="col-1-1">(517) 676-4160</span>
+            </div>
+
+            <div class="col-1-3">
+                <span class="col-1-1">Facebook</span>
+                <span class="col-1-1">NRA</span>
+                <span class="col-1-1">Other Sponsor</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script 
+        src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+        crossorigin="anonymous">
+    </script>
+
+    <!-- SweetAlert2 -->
+    <script type="text/javascript" src="https://unpkg.com/sweetalert2@7.15.1/dist/sweetalert2.all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+    <!-- Vue.js -->
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+    <!-- VueFire -->
+    <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+
+    <!-- Lodash -->
+    <script src="js/lodash.min.js"></script>
+
+    <!-- main.js -->
+    <script src="js/Discount.js"></script>
+</body>
+</html>

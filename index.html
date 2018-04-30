@@ -19,6 +19,11 @@ Project: mega-project-hub
 <!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 
+<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+
 <!-- SimpleGrid -->
     <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
 
@@ -28,36 +33,104 @@ Project: mega-project-hub
 
 <body>
 	<div id="container" class="grid">
-		<div class="col-1-12 hide-on-mobile"><!-- left spacer for #desk --></div>
-		<div id="desk" class="col-10-12">
-			<div id="deskComputer" class="col-2-3">
-				<div class="screen">
-					<iframe src="http://www.CodeDubes.com" frameborder="0" v-show="session.showScreen == 1"></iframe>
+		<div class="hide-on-mobile">
+			<div class="col-1-12"></div>
+			<div id="desk" class="col-10-12">
+				<div id="deskComputer" class="col-2-3">
+					<div class="screen">
+						<div id="screenStickyNote">
+							<span><b>1)</b> Turn On PC</span>
+							<br>
+							<span><b>2)</b> Select Project</span>
+						</div>
+						<iframe id="screenFrame" style="display:none;" v-bind:src="session.selectedProject.folder" frameborder="0" v-show="session.showComputerScreen == 1"></iframe>
+					</div>
+					<div class="stand">
+						<div class="button" v-cloak>
+							<p class="textAlignCenter off" v-show="session.showComputerScreen == 0" @click="session.showComputerScreen = 1"></p>
+							<p class="textAlignCenter on" v-show="session.showComputerScreen == 1" @click="session.showComputerScreen = 0"></p>
+						</div>
+					</div>
 				</div>
-				<div class="stand">
-					<div class="button" v-cloak>
-						<p class="textAlignCenter off" v-show="session.showScreen == 0" @click="session.showScreen = 1"></p>
-						<p class="textAlignCenter on" v-show="session.showScreen == 1" @click="session.showScreen = 0"></p>
+
+				<div class="col-1-12"></div>
+
+				<div id="deskBoard" class="col-3-12">
+					<div class="board">
+						<div class="content textAlignCenter">
+							<ul id="projectList">
+								<u>Projects:</u>
+								<li v-cloak class="project" v-for="project in Projects" @click="ProjectSelect(project)"><span>{{project.name}}</span></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-
 			<div class="col-1-12"></div>
+			
+			<div id="deskTable" class="col-1-1">
+				<div class="top col-1-1"></div>
+				<div class="col-1-1">
+					<div class="col-1-12"></div>
+					<div class="leg col-1-12"></div>
+					<div class="col-8-12"></div>
+					<div class="leg col-1-12"></div>
+					<div class="col-1-12"></div>
+				</div>
+			</div>
 
-			<div id="deskBoard" class="col-3-12">
-				<div class="board">
-					<div class="content">
-						<p><u>Projects:</u></p>
+			<div id="aboutMe" class="col-1-1">
+				<div id="mePicture" class="col-1-2">
+					<div id="picFrameOuter">
+						<div id="picFrameMiddle">
+							<div id="picFrameInner">
+								<!-- <img src="images/me.jpg" alt="Classy Picture of Joe Davis"> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="meContent" class="col-1-2">
+					<div class="col-1-12"></div>
+					<div class="col-10-12">
+						"Joe is the coolest and he is great at coding!"<br>
+						- someone, probably
+					</div>
+					<div class="col-1-12"></div>
+				</div>
+			</div>
+
+			<div id="aboutWork" class="col-1-1">
+				<div id="workFolders" class="col-1-1">
+					<div id="workList" class="col-1-1">
+						<div v-cloak class="col-3-12 work workNotSelected" v-for="work in Works" @click="WorkSelect(work)">
+							<p class="employer"><b>{{work.employer}}</b></p>
+							<p class="title">{{work.title}}</p>
+						</div>
+					</div>
+					<div id="workFolder" class="col-1-1">
+						<div class="col-1-12"></div>
+						<div id="workInfoBeforeSelect" class="col-10-12 textAlignCenter" v-show="session.showFolderInfo == 0">
+							<span>Employment Information</span>
+						</div>
+						<div id="workInfo" class="col-10-12" v-show="session.showFolderInfo == 1">
+							<div class="col-1-12"></div>
+							<div v-cloak class="col-10-12">{{session.selectedWork.employer}}</div>
+							<div class="col-1-12"></div>
+						</div>
+						<div class="col-1-12"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-1-12 hide-on-mobile"><!-- right spacer for #desk --></div>
-		
-		<div id="deskTable" class="col-1-1"></div>
+
+		<div class="show-on-mobile">
+			<div id="projects">
+				<div class="project" v-for="project in Projects">test: {{project.name}}</div>
+			</div>
+		</div>
 	</div>
 
-	<span id="printSpan" class="textAlignCenter" hidden><br><br><br><br>☠️&nbsp;&nbsp;&nbsp;Don't Print My Website&nbsp;&nbsp;&nbsp;☠️<br><br>👽</span>
+	<span id="printSpan" class="textAlignCenter" hidden><br><br><br><br><br><br>☠️&nbsp;&nbsp;&nbsp;Don't Print My Website&nbsp;&nbsp;&nbsp;☠️<br><br>👽</span>
 
 
 <!-- JQuery -->
