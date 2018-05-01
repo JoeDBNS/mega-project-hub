@@ -51,9 +51,36 @@ body {
 		display: none;
 	}
 
+/* About Me */
+	#aboutMe {
+		padding-top: 90px;
+		margin-bottom: 90px;
+	}
+	/* Picture */
+		#picFrameOuter {
+			width: 400px;
+			height: 500px;
+			margin: auto;
+			border: 6px ridge rgb(145, 93, 51);
+		}
+		#picFrameMiddle {
+			width: 390px;
+			height: 490px;
+			border: 5px solid rgb(145, 104, 50);
+		}
+		#picFrameInner {
+			width: 380px;
+			height: 480px;
+			border: 5px ridge rgb(177, 142, 113);
+		}
+		#mePicture img {
+			width: 380px;
+			height: 480px;
+		}
+
 /* Desk */
 	#desk {
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 	/* Computer */
 		#deskComputer .screen {
@@ -78,7 +105,7 @@ body {
 		}
 		#deskComputer .stand .button {
 			position: absolute;
-			width: 16px;
+			width: 20px;
 			margin-top: 8px;
 			margin-left: 10px;
 			cursor: pointer;
@@ -87,6 +114,7 @@ body {
 			margin: 0;
 			height: 1em;
 			border-radius: 10px;
+			border: 1px solid rgb(94, 94, 94);
 		}
 		#deskComputer .on {
 			background-color: rgb(0, 153, 255);
@@ -142,11 +170,14 @@ body {
 			cursor: pointer;
 			color: blue;
 		}
-		#deskBoard.project:nth-child(odd) {
+		#deskBoard .project:nth-child(odd) {
 			transform: rotate(1deg);
 		}
 		#deskBoard .project:nth-child(even) {
 			transform: rotate(-1deg);
+		}
+		#deskBoard .project:hover {
+			transform: scale(1.1);
 		}
 		#deskBoard .project:before {
 			content: "- ";
@@ -165,77 +196,85 @@ body {
 			height: 10px;
 		}
 
-/* About Me */
-	#aboutMe {
-		padding-top: 90px;
-		margin-bottom: 90px;
-	}
-	/* Picture */
-		#picFrameOuter {
-			width: 400px;
-			height: 500px;
-			margin: auto;
-			border: 6px ridge rgb(145, 93, 51);
-		}
-		#picFrameMiddle {
-			width: 390px;
-			height: 490px;
-			border: 5px solid rgb(145, 104, 50);
-		}
-		#picFrameInner {
-			width: 380px;
-			height: 480px;
-			border: 5px ridge rgb(177, 142, 113);
-		}
-		#mePicture img {
-			width: 380px;
-			height: 480px;
-		}
-
 /* About Work */
 	#aboutWork {
 		padding-top: 90px;
 	}
-	/* Folder */
-		#workFolder {
-			height: 580px;
-			background-color: #a26045;
-			border-top: 1px solid #885039;
-			border-radius: 0 10px 10px 10px;
+	/* Work Board */
+		#workBoardBorder {
+			border: 6px solid silver;
 		}
-		.work {
-    		user-select: none;
-			border-radius: 10px 30px 0 0;
+		#workBoard {
+			border: 1px solid gray;
+			height: 400px;
+			background-color: rgb(170, 125, 86);
+		}
+	/* Resume */
+		#workBoard .resume {
+			position: relative;
+			top: 20px;
+			left: calc(100% - 110px);
+			width: 70px;
+			height: 50px;
+			overflow: hidden;
+			padding: 6px;
+			background-color: #FEF46E;
+			transform: rotate(-4deg);
+			font-size: 13px;
+			font-family: 'Capriola', sans-serif;
+			z-index: 1;
+			box-shadow: -1px -1px rgb(212, 198, 0) inset, 1px 1px rgb(212, 198, 0) inset;
 			cursor: pointer;
-			padding: .3em .3em .3em 1em;
-			background-color: #956822;
+			text-align: center;
 		}
-		.work:hover {
-			background-color: #c58a2b;
+		#workBoard .resume:hover {
+			transform: scale(1.1);
 		}
-		.work p {
-			margin: 0;
-			font-size: 75%;
+	/* Jobs */
+		.job {
+			width: 100px;
+			height: 120px;
+			padding: 6px;
+			background-color: whitesmoke;
+			box-shadow: 0 0 1px rgb(129, 129, 129);
+			overflow: hidden;
+			position: absolute;
+			cursor: pointer;
+			font-weight: bold;
 		}
-		.work .employer {
-			font-size: 90%;
+		.job:hover {
+			box-shadow: 0 0 6px red;
 		}
-		.workSelected {
-			background-color: #b18642;
-		}
-		#workInfo {
-			height: 500px;
-			margin: 40px 0 40px 0;
-			background-color: white;
-			border: 1px solid black;
+		.job .tack {
+			position: absolute;
+			top: 3px;
+			left: calc(50% - 8px);
+			width: 6px;
+			height: 6px;
+			background-color: red;
 			border-radius: 10px;
+			box-shadow: 1px 1px brown, 2px 2px silver;
+			z-index: 1;
 		}
-		#workInfoBeforeSelect {
-			font-family: 'Luckiest Guy';
-			font-size: 40px;
-			color: #5f0000;
-			padding: 20%;
+		.job p {
+			margin: 0;
+			font-size: 13px;
 		}
+		.job .sml {
+			font-size: 6px;
+		}
+		.job .title {
+			margin-bottom: 6px;
+		}
+		.job .employer {
+			margin-bottom: 6px;
+		}
+	
+/* SweetAlert2 */
+	.swal2-popup {
+		border-radius: 0px;
+		background-image: url("../images/paper.png");
+	}
 
 /* Print */
 	@media print {

@@ -24,6 +24,9 @@ Project: mega-project-hub
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
 
+<!-- SweetAlert2 -->
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+
 <!-- SimpleGrid -->
     <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
 
@@ -34,6 +37,28 @@ Project: mega-project-hub
 <body>
 	<div id="container" class="grid">
 		<div class="hide-on-mobile">
+
+			<div id="aboutMe" class="col-1-1">
+				<div id="mePicture" class="col-1-2">
+					<div id="picFrameOuter">
+						<div id="picFrameMiddle">
+							<div id="picFrameInner">
+								<!-- <img src="images/me.jpg" alt="Classy Picture of Joe Davis"> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="meContent" class="col-1-2">
+					<div class="col-1-12"></div>
+					<div class="col-10-12">
+						"Joe is the coolest and he is great at coding!"
+						<br>
+						- someone, probably
+					</div>
+					<div class="col-1-12"></div>
+				</div>
+			</div>
+
 			<div class="col-1-12"></div>
 			<div id="desk" class="col-10-12">
 				<div id="deskComputer" class="col-2-3">
@@ -59,7 +84,7 @@ Project: mega-project-hub
 					<div class="board">
 						<div class="content textAlignCenter">
 							<ul id="projectList">
-								<u>Projects:</u>
+								<u>Project Demos:</u>
 								<li v-cloak class="project" v-for="project in Projects" @click="ProjectSelect(project)"><span>{{project.name}}</span></li>
 							</ul>
 						</div>
@@ -67,7 +92,7 @@ Project: mega-project-hub
 				</div>
 			</div>
 			<div class="col-1-12"></div>
-			
+
 			<div id="deskTable" class="col-1-1">
 				<div class="top col-1-1"></div>
 				<div class="col-1-1">
@@ -79,51 +104,29 @@ Project: mega-project-hub
 				</div>
 			</div>
 
-			<div id="aboutMe" class="col-1-1">
-				<div id="mePicture" class="col-1-2">
-					<div id="picFrameOuter">
-						<div id="picFrameMiddle">
-							<div id="picFrameInner">
-								<!-- <img src="images/me.jpg" alt="Classy Picture of Joe Davis"> -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="meContent" class="col-1-2">
-					<div class="col-1-12"></div>
-					<div class="col-10-12">
-						"Joe is the coolest and he is great at coding!"<br>
-						- someone, probably
-					</div>
-					<div class="col-1-12"></div>
-				</div>
-			</div>
-
 			<div id="aboutWork" class="col-1-1">
-				<div id="workFolders" class="col-1-1">
-					<div id="workList" class="col-1-1">
-						<div v-cloak class="col-3-12 work workNotSelected" v-for="work in Works" @click="WorkSelect(work)">
-							<p class="employer"><b>{{work.employer}}</b></p>
-							<p class="title">{{work.title}}</p>
+				<div id="workBoardBorder" class="col-1-1">
+					<div id="workBoard" class="col-1-1">
+						<div class="resume">
+							<a>Click To Download Resume</a>
 						</div>
-					</div>
-					<div id="workFolder" class="col-1-1">
-						<div class="col-1-12"></div>
-						<div id="workInfoBeforeSelect" class="col-10-12 textAlignCenter" v-show="session.showFolderInfo == 0">
-							<span>Employment Information</span>
+						<div v-cloak class="job" v-for="job in Jobs" v-bind:style="job.style" @click="JobClicked(job)">
+							<div class="tack"></div>
+							<p class="sml">Role:</p>
+							<p class="title">{{job.title}}</p>
+							<p class="sml">Employer:</p>
+							<p class="employer">{{job.employer}}</p>
+							<p class="sml">Duration:</p>
+							<p class="length">{{job.length}} months</p>
 						</div>
-						<div id="workInfo" class="col-10-12" v-show="session.showFolderInfo == 1">
-							<div class="col-1-12"></div>
-							<div v-cloak class="col-10-12">{{session.selectedWork.employer}}</div>
-							<div class="col-1-12"></div>
-						</div>
-						<div class="col-1-12"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="show-on-mobile">
+			<img src="images/under_construction.gif" alt="Under Constriction GIF">
+			<br><br><br>
 			<div id="projects">
 				<div class="project" v-for="project in Projects">test: {{project.name}}</div>
 			</div>
@@ -135,9 +138,6 @@ Project: mega-project-hub
 
 <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-<!-- SweetAlert2 -->
-    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
 
 <!-- Vue.js -->
     <!-- <script type="text/javascript" src="js/vue2.min.js"></script> -->
