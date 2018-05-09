@@ -164,6 +164,112 @@ Project: mega-project-hub
 						left: '484px'
 					}
 				}
+			],
+			Skills: [
+				{
+					name: 'HTML5',
+					image: 'images/skills/HTML5.png',
+					style: {
+						top: '20px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'CSS3',
+					image: 'images/skills/CSS3.png',
+					style: {
+						top: '66px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'JavaScript',
+					image: 'images/skills/JavaScript.png',
+					style: {
+						top: '114px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Google Maps API',
+					image: 'images/skills/GoogleMaps.png',
+					style: {
+						top: '160px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Bootstrap',
+					image: 'images/skills/Bootstrap.png',
+					style: {
+						top: '206px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Vue.js',
+					image: 'images/skills/Vue.png',
+					style: {
+						top: '264px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Google Firebase',
+					image: 'images/skills/Firebase.png',
+					style: {
+						top: '308px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Adobe Photoshop',
+					image: 'images/skills/Photoshop.png',
+					style: {
+						top: '354px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Gimp',
+					image: 'images/skills/Gimp.png',
+					style: {
+						top: '400px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Python',
+					image: 'images/skills/Python.png',
+					style: {
+						top: '446px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'C#',
+					image: 'images/skills/Csharp.png',
+					style: {
+						top: '492px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'SQL',
+					image: 'images/skills/SQL.png',
+					style: {
+						top: '538px',
+						left: GetFridgeMagnets()
+					}
+				},
+				{
+					name: 'Microsoft Dynamics CRM',
+					image: 'images/skills/MicrosoftDynamics.png',
+					style: {
+						top: '584px',
+						left: GetFridgeMagnets()
+					}
+				}
 			]
 		},
 		methods: {
@@ -177,17 +283,6 @@ Project: mega-project-hub
 					text: job.employer
 				});
 			}
-		},
-		computed: {
-			Folder_Active: function() {
-				var activeItems = [''];
-				this.Folders.forEach(folder => {
-					if (folder.name == this.session.dirCur) {
-						activeItems = folder.items;
-					}
-				});
-				return activeItems;
-			}
 		}
 	});
 
@@ -200,10 +295,15 @@ Project: mega-project-hub
 	function GetTransformValue() {
 		var nVal = Math.floor((Math.random() * 2) + 1);
 		var tVal = Math.floor((Math.random() * 6) + 1);
-		if (nVal == 1) {
+		if (nVal == 1)
 			var tString = "rotate(-" + tVal + "deg)"
-		}
 		else
 			var tString = "rotate(" + tVal + "deg)"
 		return tString;
+	}
+	function GetFridgeMagnets() {
+		var elmWidth = document.getElementById("fridge").offsetWidth;
+		var elmWidthCount = (elmWidth/40).toString().split(".")[0] - 2;
+		var xPos = Math.floor((Math.random() * elmWidthCount) + 1);
+		return ((40 * xPos).toString() + "px");
 	}

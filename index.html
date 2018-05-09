@@ -122,13 +122,52 @@ Project: mega-project-hub
 					</div>
 				</div>
 			</div>
+
+			<div id="aboutSkills" class="col-1-1">
+				<div class="col-3-12"></div>
+				<div id="fridge" class="col-6-12">
+					<div v-cloak class="fridgeImage" v-for="skill in Skills" v-bind:style="skill.style">
+						<img v-bind:src="skill.image" v-bind:alt="skill.name" v-bind:title="skill.name" height="40px" width="40px">
+					</div>
+					<div id="fridgeFreezer" class="col-1-1">
+						<div class="handle"></div>
+					</div>
+					<div id="fridgeFridge" class="col-1-1">
+						<div class="handle"></div>
+					</div>
+				</div>
+				<div class="col-3-12"></div>
+			</div>
+
+			<div id="feedback" class="col-1-1">
+				<p>Thanks for stopping by!</p>
+				<p>Constructive criticism provides all the benefits of failure without all the bad parts.</p>
+				<p>If you have an urge to share some constructive criticism, I'd truly like to hear your ideas!</p>
+				<textarea name="feedbackInput" id="feedbackInput" cols="30" rows="10"></textarea>
+			</div>
 		</div>
 
 		<div class="show-on-mobile">
-			<img src="images/under_construction.gif" alt="Under Constriction GIF">
+			<br>
+			<br>
+			<br>
+			<img src="images/under_construction.gif" alt="Under Constriction GIF" style="box-shadow: 0 0 10px 3px red;">
 			<br><br><br>
-			<div id="projects">
-				<div class="project" v-for="project in Projects">test: {{project.name}}</div>
+			<div id="mobileProjects">
+				Projects:
+				<div class="mobProj" v-for="project in Projects">{{project.name}}</div>
+			</div>
+			<br>
+			<br>
+			<div id="mobileJobs">
+				Jobs:
+				<div class="mobJob" v-for="job in Jobs">{{job.employer}}</div>
+			</div>
+			<br>
+			<br>
+			<div id="mobileSkills">
+				Skills:
+				<div class="mobSkil" v-for="skill in Skills">{{skill.name}}</div>
 			</div>
 		</div>
 	</div>
@@ -137,7 +176,7 @@ Project: mega-project-hub
 
 
 <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
 
 <!-- Vue.js -->
     <!-- <script type="text/javascript" src="js/vue2.min.js"></script> -->
