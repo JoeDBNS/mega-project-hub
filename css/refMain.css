@@ -301,6 +301,49 @@ body {
 		#fridgeFreezer {
 			height: 40%;
 			border-bottom: 1px solid black;
+			font-family: 'Fredoka One';
+		}
+		#fridgeFreezer .words {
+			padding-top: 30px;
+			padding-left: 40px;
+		}
+		#fridgeFreezer .word {
+			font-size: 22px;
+			color: #e63939;
+			text-shadow: 1px 1px #615d5d;
+			user-select: none;
+		}
+		#fridgeFreezer .letter {
+			cursor: pointer;
+		}
+		#skillBox {
+			position: absolute;
+			left: 50px;
+			top: 140px;
+			width: 60px;
+			height: 70px;
+			background-color: darkgray;
+			border: 1px solid black;
+			border-radius: 4px;
+			box-shadow: 1px 1px 3px black inset;
+		}
+		#waterButton {
+			padding: 2px;
+			width: 30px;
+			margin: 16px auto auto auto;
+			background-color: #ffffff;
+			font-size: 10px;
+			border-radius: 3px;
+		}
+		#skillDisplay {
+			position: absolute;
+			left: 160px;
+			top: 80px;
+			width: 40%;
+			height: 130px;
+			background-color: #FDF6EC;
+			box-shadow: 1px 1px 1px gray;
+			padding: 10px;
 		}
 		#fridgeFridge {
 			height: 60%;

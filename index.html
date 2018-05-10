@@ -23,6 +23,7 @@ Project: mega-project-hub
 	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
 
 <!-- SweetAlert2 -->
     <script type="text/javascript" src="js/sweetalert2.min.js"></script>
@@ -126,14 +127,40 @@ Project: mega-project-hub
 			<div id="aboutSkills" class="col-1-1">
 				<div class="col-3-12"></div>
 				<div id="fridge" class="col-6-12">
-					<div v-cloak class="fridgeImage" v-for="skill in Skills" v-bind:style="skill.style">
-						<img v-bind:src="skill.image" v-bind:alt="skill.name" v-bind:title="skill.name" height="40px" width="40px">
-					</div>
 					<div id="fridgeFreezer" class="col-1-1">
 						<div class="handle"></div>
+						<div id="skillSelector">
+							<div id="skillBox">
+								<div id="waterButton" class="textAlignCenter">Drag Skill Here</div>
+							</div>
+						</div>
+						<div v-cloak id="skillDisplay" v-show="session.selectedSkill.name != null">
+							<span>
+								<a v-bind:href="session.selectedSkill.link" target="_blank">{{session.selectedSkill.name}}</a>
+							</span>
+						</div>
+						<div v-cloak class="col-1-1 textAlignCenter words">
+							<div class="col-1-1 word">
+								<span v-for="letter in 'Fridge'"><span class="letter">{{letter}}</span>&nbsp;</span>
+								&nbsp;
+								<span v-for="letter in 'Of'"><span class="letter">{{letter}}</span>&nbsp;</span>
+								&nbsp;
+								<span v-for="letter in 'Skills'"><span class="letter">{{letter}}</span>&nbsp;</span>
+							</div>
+						</div>
 					</div>
 					<div id="fridgeFridge" class="col-1-1">
 						<div class="handle"></div>
+						<div v-cloak class="col-1-2">
+							<div class="fridgeImage" v-for="(skill, index) in Skills" v-bind:style="skill.style" v-if="index < 7" @click="CheckSkill(event, skill)">
+								<img v-bind:src="skill.image" v-bind:alt="skill.name" v-bind:title="skill.name" v-bind:id="skill.name" height="40px" width="40px">
+							</div>
+						</div>
+						<div v-cloak class="col-1-2">
+							<div class="fridgeImage" v-for="(skill, index) in Skills" v-bind:style="skill.style" v-if="index > 6" @click="CheckSkill(event, skill)">
+								<img v-bind:src="skill.image" v-bind:alt="skill.name" v-bind:title="skill.name" v-bind:id="skill.name" height="40px" width="40px">
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-3-12"></div>
@@ -176,7 +203,8 @@ Project: mega-project-hub
 
 
 <!-- JQuery -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
 <!-- Vue.js -->
     <!-- <script type="text/javascript" src="js/vue2.min.js"></script> -->

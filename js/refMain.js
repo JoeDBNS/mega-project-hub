@@ -30,6 +30,10 @@ Project: mega-project-hub
 					dateBegin: 'Mar 2017',
 					dateEnd: 'Present',
 					title: 'Web and Software Developer'
+				},
+				selectedSkill: {
+					name: null,
+					link: null
 				}
 			},
 			Projects: [
@@ -172,7 +176,8 @@ Project: mega-project-hub
 					style: {
 						top: '20px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://en.wikipedia.org/wiki/HTML5'
 				},
 				{
 					name: 'CSS3',
@@ -180,7 +185,8 @@ Project: mega-project-hub
 					style: {
 						top: '66px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://en.wikipedia.org/wiki/Cascading_Style_Sheets'
 				},
 				{
 					name: 'JavaScript',
@@ -188,7 +194,8 @@ Project: mega-project-hub
 					style: {
 						top: '114px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://www.javascript.com/'
 				},
 				{
 					name: 'Google Maps API',
@@ -196,7 +203,8 @@ Project: mega-project-hub
 					style: {
 						top: '160px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://developers.google.com/maps/documentation/'
 				},
 				{
 					name: 'Bootstrap',
@@ -204,7 +212,8 @@ Project: mega-project-hub
 					style: {
 						top: '206px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://getbootstrap.com/'
 				},
 				{
 					name: 'Vue.js',
@@ -212,7 +221,8 @@ Project: mega-project-hub
 					style: {
 						top: '264px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://vuejs.org/'
 				},
 				{
 					name: 'Google Firebase',
@@ -220,55 +230,62 @@ Project: mega-project-hub
 					style: {
 						top: '308px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://firebase.google.com/'
 				},
 				{
 					name: 'Adobe Photoshop',
 					image: 'images/skills/Photoshop.png',
 					style: {
-						top: '354px',
+						top: '20px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://www.adobe.com/products/photoshopfamily.html'
 				},
 				{
 					name: 'Gimp',
 					image: 'images/skills/Gimp.png',
 					style: {
-						top: '400px',
+						top: '66px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://www.gimp.org/'
 				},
 				{
 					name: 'Python',
 					image: 'images/skills/Python.png',
 					style: {
-						top: '446px',
+						top: '114px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://www.python.org/'
 				},
 				{
 					name: 'C#',
 					image: 'images/skills/Csharp.png',
 					style: {
-						top: '492px',
+						top: '160px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://en.wikipedia.org/wiki/C_Sharp_(programming_language)'
 				},
 				{
 					name: 'SQL',
 					image: 'images/skills/SQL.png',
 					style: {
-						top: '538px',
+						top: '206px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://en.wikipedia.org/wiki/SQL'
 				},
 				{
 					name: 'Microsoft Dynamics CRM',
 					image: 'images/skills/MicrosoftDynamics.png',
 					style: {
-						top: '584px',
+						top: '264px',
 						left: GetFridgeMagnets()
-					}
+					},
+					link: 'https://dynamics.microsoft.com/en-us/'
 				}
 			]
 		},
@@ -282,6 +299,17 @@ Project: mega-project-hub
 					title: job.title,
 					text: job.employer
 				});
+			},
+			CheckSkill: function(event, skill) {
+				if ((Math.abs(event.target.parentElement.offsetLeft - 58) < 18) && (Math.abs(-event.target.parentElement.offsetTop - 104) < 24)) {
+					this.session.selectedSkill = skill;
+				}
+				else if ((Math.abs(-event.target.parentElement.offsetLeft - 228) < 18) && (Math.abs(-event.target.parentElement.offsetTop - 103) < 24)) {
+					this.session.selectedSkill = skill;
+				}
+				else {
+					this.session.selectedSkill = { name: null, link: null }
+				}
 			}
 		}
 	});
@@ -302,8 +330,14 @@ Project: mega-project-hub
 		return tString;
 	}
 	function GetFridgeMagnets() {
-		var elmWidth = document.getElementById("fridge").offsetWidth;
+		var elmWidth = document.getElementById("fridge").offsetWidth/2;
 		var elmWidthCount = (elmWidth/40).toString().split(".")[0] - 2;
 		var xPos = Math.floor((Math.random() * elmWidthCount) + 1);
 		return ((40 * xPos).toString() + "px");
 	}
+
+// OnLoad Run
+	$(function() {
+		$(".fridgeImage").draggable();
+		$(".letter").draggable();
+	});
