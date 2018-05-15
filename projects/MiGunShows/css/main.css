@@ -1,10 +1,3 @@
-/* Similar Color Palette */
-/* https://color.adobe.com/Flat-UI-color-theme-2469224/ */
-
-/* Alternative Military Brown Color Palette */
-/* http://www.color-hex.com/color-palette/19633 */
-
-
 /* Simple Grid */
     [class*='col-'] {
         padding-right: 0;
@@ -223,7 +216,7 @@
 /* Event Style */
     .eventLayout {
         overflow: auto;
-        width: 320px;
+        width: 207px;
         margin: auto;
         cursor: pointer;
         border-radius: 10px;
@@ -247,71 +240,70 @@
         font-family: 'Lato', sans-serif;
         text-shadow: none;
         margin: 16px 0 14px 0;
-        padding: 8px;
-        height: 2rem;
     }
     .eventLayoutInfo .city {
+        font-size: .75rem;
         margin-bottom: 1em;
     }
     .eventLayoutImage .date {
         position: absolute;
         /* background-color: #a0a0a0; */
         background-color: #A03A3A;
-        width: 6.5em;
+        width: 6.25em;
         border-radius: 10px 0;
         min-height: 3em;
     }
     .eventLayoutImage .cost {
         position: absolute;
-        margin-left: 248px;
+        margin-left: 160px;
         /* background-color: #a0a0a0; */
         background-color: #A03A3A;
-        width: 4.5em;
+        width: 3em;
         border-radius: 0 10px;
         min-height: 3em;
     }
     /* Upcoming */
-    .eventLayoutUpcoming {
-        width: 335px;
-    }
-    .eventLayoutUpcoming .eventLayoutImage .cost {
-        margin-left: 263px;
-    }
-    @media handheld, only screen and (max-width: 767px) {
         .eventLayoutUpcoming {
-            width: 320px;
+            width: 207px;
         }
         .eventLayoutUpcoming .eventLayoutImage .cost {
-            margin-left: 248px;
+            margin-left: 160px;
         }
-        .eventLayoutUpcoming img {
-            width: 320px;
-            height: 200px;
+        @media handheld, only screen and (max-width: 767px) {
+            .eventLayoutUpcoming {
+                width: 207px;
+            }
+            .eventLayoutUpcoming .eventLayoutImage .cost {
+                margin-left: 160px;
+            }
+            .eventLayoutUpcoming img {
+                width: 207px;
+                height: 130px;
+            }
         }
-    }
     /* Today */
-    .eventLayoutToday {
-        width: 400px;
-    }
-    .eventLayoutToday .eventLayoutImage .cost {
-        margin-left: 328px;
-    }
-    .eventLayoutToday img {
-        width: 400px;
-        height: 250px;
-    }
-    @media handheld, only screen and (max-width: 767px) {
         .eventLayoutToday {
-            width: 320px;
+            width: 400px;
         }
         .eventLayoutToday .eventLayoutImage .cost {
-            margin-left: 248px;
+            margin-left: 328px;
         }
         .eventLayoutToday img {
-            width: 320px;
-            height: 200px;
+            width: 400px;
+            height: 250px;
         }
-    }
+        @media handheld, only screen and (max-width: 767px) {
+            .eventLayoutToday {
+                width: 320px;
+            }
+            .eventLayoutToday .eventLayoutImage .cost {
+                margin-left: 248px;
+            }
+            .eventLayoutToday img {
+                width: 320px;
+                height: 200px;
+            }
+        }
 
 /* Rules, Discounts, and About */
     #eventsRules ul li {

@@ -14,8 +14,8 @@ Project: mega-project-hub
 				date: GetTodayDate(),
 				showComputerScreen: 0,
 				selectedProject: {
-					name: "Terminal Website",
-					folder: 'projects/TerminalWebsite/index.html',
+					name: "Placeholder",
+					folder: 'projects/Placeholder/index.html',
 					color: '',
 					features: [
 						"JavaScript",
@@ -301,11 +301,10 @@ Project: mega-project-hub
 				});
 			},
 			CheckSkill: function(event, skill) {
-				if ((Math.abs(event.target.parentElement.offsetLeft - 58) < 18) && (Math.abs(-event.target.parentElement.offsetTop - 104) < 24)) {
+				if ($("#skillBox").hasClass("skillBoxFull")) {
 					this.session.selectedSkill = skill;
-				}
-				else if ((Math.abs(-event.target.parentElement.offsetLeft - 228) < 18) && (Math.abs(-event.target.parentElement.offsetTop - 103) < 24)) {
-					this.session.selectedSkill = skill;
+					$("#fridgeOpen").show();
+					$("#skillDisplay").show();
 				}
 				else {
 					this.session.selectedSkill = { name: null, link: null }
@@ -338,6 +337,23 @@ Project: mega-project-hub
 
 // OnLoad Run
 	$(function() {
-		$(".fridgeImage").draggable();
+		$(".fridgeImage").draggable({
+			drag: function() {
+				if ((Math.abs(parseInt(this.style.left) - 58) < 18) && (Math.abs(-parseInt(this.style.top) - 104) < 24)) {
+					document.getElementById("skillBox").classList.remove("skillBoxEmpty");
+					document.getElementById("skillBox").classList.add("skillBoxFull");
+				}
+				else if ((Math.abs(-parseInt(this.style.left) - 228) < 18) && (Math.abs(-parseInt(this.style.top) - 103) < 24)) {
+					document.getElementById("skillBox").classList.remove("skillBoxEmpty");
+					document.getElementById("skillBox").classList.add("skillBoxFull");
+				}
+				else {
+					document.getElementById("skillBox").classList.remove("skillBoxFull");
+					document.getElementById("skillBox").classList.add("skillBoxEmpty");
+					$("#fridgeOpen").hide();
+					$("#skillDisplay").hide();
+				}
+			}
+		});
 		$(".letter").draggable();
 	});

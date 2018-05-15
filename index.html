@@ -38,7 +38,6 @@ Project: mega-project-hub
 <body>
 	<div id="container" class="grid">
 		<div class="hide-on-mobile">
-
 			<div id="aboutMe" class="col-1-1">
 				<div id="mePicture" class="col-1-2">
 					<div id="picFrameOuter">
@@ -55,6 +54,8 @@ Project: mega-project-hub
 						"Joe is the coolest and he is great at coding!"
 						<br>
 						- someone, probably
+						<br><br><br>
+						Reference <a href="http://jservice.io/" target="_blank">http://jservice.io/</a> for a header idea
 					</div>
 					<div class="col-1-12"></div>
 				</div>
@@ -130,7 +131,7 @@ Project: mega-project-hub
 					<div id="fridgeFreezer" class="col-1-1">
 						<div class="handle"></div>
 						<div id="skillSelector">
-							<div id="skillBox">
+							<div id="skillBox" class="skillBoxEmpty">
 								<div id="waterButton" class="textAlignCenter">Drag Skill Here</div>
 							</div>
 						</div>
@@ -141,11 +142,9 @@ Project: mega-project-hub
 						</div>
 						<div v-cloak class="col-1-1 textAlignCenter words">
 							<div class="col-1-1 word">
-								<span v-for="letter in 'Fridge'"><span class="letter">{{letter}}</span>&nbsp;</span>
+								<span v-for="letter in 'Skill'"><span class="letter">{{letter}}</span>&nbsp;</span>
 								&nbsp;
-								<span v-for="letter in 'Of'"><span class="letter">{{letter}}</span>&nbsp;</span>
-								&nbsp;
-								<span v-for="letter in 'Skills'"><span class="letter">{{letter}}</span>&nbsp;</span>
+								<span v-for="letter in 'Magnets'"><span class="letter">{{letter}}</span>&nbsp;</span>
 							</div>
 						</div>
 					</div>
@@ -161,6 +160,20 @@ Project: mega-project-hub
 								<img v-bind:src="skill.image" v-bind:alt="skill.name" v-bind:title="skill.name" v-bind:id="skill.name" height="40px" width="40px">
 							</div>
 						</div>
+						<div id="fridgeOpen" style="display: none;" v-show="session.selectedSkill.name != null">
+							<div id="fridgeOpenDoor" class="col-1-12 fridgeSection">
+								<div id="fridgeOpenDoorHandle"></div>
+							</div>
+							<div class="col-11-12 fridgeSection">
+								<div class="col-10-12 shelve"></div>
+								<div class="col-10-12 shelve"></div>
+								<div class="col-10-12 shelve"></div>
+								<div class="col-10-12 shelve">
+									<div class="shelveLeft"></div>
+									<div class="shelveRight"></div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="col-3-12"></div>
@@ -168,9 +181,9 @@ Project: mega-project-hub
 
 			<div id="feedback" class="col-1-1">
 				<p>Thanks for stopping by!</p>
-				<p>Constructive criticism provides all the benefits of failure without all the bad parts.</p>
+				<!-- <p>Constructive criticism provides all the benefits of failure without all the bad parts.</p>
 				<p>If you have an urge to share some constructive criticism, I'd truly like to hear your ideas!</p>
-				<textarea name="feedbackInput" id="feedbackInput" cols="30" rows="10"></textarea>
+				<textarea name="feedbackInput" id="feedbackInput" cols="30" rows="10"></textarea> -->
 			</div>
 		</div>
 

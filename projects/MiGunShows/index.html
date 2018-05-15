@@ -44,9 +44,9 @@ Project: www.migunshows.com - REMAKE
         </div>
 
         <div id="navBar" class="grid textAlignCenter">
-            <div class="col-4-12"><a class="noDec" href="index.html">Home</a></div>
-            <div class="col-4-12"><a class="noDec" href="AdmissionDiscount.html">Admission Discounts</a></div>
-            <div class="col-4-12"><a class="noDec" href="#MakeDownloadButton">Dealer Reservation Form</a></div>
+            <div class="col-4-12 mobile-col-1-3"><a class="noDec" href="index.html">Home</a></div>
+            <div class="col-4-12 mobile-col-1-3"><a class="noDec" href="AdmissionDiscount.html">Admission Discounts</a></div>
+            <div class="col-4-12 mobile-col-1-3"><a class="noDec" href="#MakeDownloadButton">Reservation Form</a></div>
         </div>
 
         <div id="eventsUpcoming" class="grid textAlignCenter">
@@ -116,7 +116,7 @@ Project: www.migunshows.com - REMAKE
                 </svg>
             </div>
 
-            <div v-cloak class="col-1-2 event" v-for="event in upcomingEvents_Vue">
+            <div v-cloak class="col-1-2 mobile-col-1-2 event" v-for="event in upcomingEvents_Vue">
                 <div class="eventLayout eventLayoutUpcoming" @click="EventPopUp(event)">
                     <div class="eventLayoutImage col-1-1">
                         <div>
@@ -140,10 +140,10 @@ Project: www.migunshows.com - REMAKE
                                 <p>${{event.cost}}</p>
                             </div>
                         </div>
-                        <img v-bind:src="event.imageUrl" v-bind:alt="event.image" width="335" height="210">
+                        <img v-bind:src="event.imageUrl" v-bind:alt="event.image" width="207" height="130">
                     </div>
                     <div class="eventLayoutInfo col-1-1">
-                        <h5 class="name">{{event.name}}</h5>
+                        <p class="name">{{event.name}}</p>
                         <p class="city">{{event.address}}, {{event.city}}</p>
                     </div>
                 </div>
@@ -214,7 +214,7 @@ Project: www.migunshows.com - REMAKE
 
                 <br>
 
-                <div v-cloak class="col-1-3 midMobile-col-1-2 event" v-for="event in orderedEvents_Vue" 
+                <div v-cloak class="col-1-3 midMobile-col-1-2 mobile-col-1-3 event" v-for="event in orderedEvents_Vue" 
                     v-show="(EventFilter.show == 0) || 
                         (EventFilter.show == 1 && EventFilter.month == '' && EventFilter.city == '' && EventFilter.cost == 0) || 
                         (EventFilter.month == event.beginDate.month && EventFilter.city == '' && EventFilter.cost == 0) || 
@@ -247,10 +247,10 @@ Project: www.migunshows.com - REMAKE
                                     <p>${{event.cost}}</p>
                                 </div>
                             </div>
-                            <img v-bind:src="event.imageUrl" v-bind:alt="event.image" width="320" height="200">
+                            <img v-bind:src="event.imageUrl" v-bind:alt="event.image" width="207" height="130">
                         </div>
                         <div class="eventLayoutInfo col-1-1">
-                            <h5 class="name">{{event.name}}</h5>
+                            <p class="name">{{event.name}}</p>
                             <p class="city">{{event.address}}, {{event.city}}</p>
                         </div>
                     </div>

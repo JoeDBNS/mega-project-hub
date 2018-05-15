@@ -1,3 +1,11 @@
+<!--==================================================
+
+Date: 02-23-2017
+Author: Joseph Davis
+Project: Terminal Website
+
+===================================================-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +14,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Following Eyes</title>
+	<title>CodeDubes</title>
 
 <!-- Favicon -->
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="images/Pigeon.ico"/> -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/Pigeon.ico"/>
+
+<!-- Spectrum - Color Picker API -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.css">
 
 <!-- SimpleGrid -->
     <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
@@ -18,31 +29,121 @@
 	<link rel="stylesheet" type="text/css" href="css/refMain.css">
 </head>
 
-<body>
-    <div id="container" class="grid">
-        <div class="col-1-1 person">
-            <div class="personLayout">
-                <div class="personLayoutImage col-1-1">
-                    <div class="goofyEyes eyesForBillMurray">
-                        <div class='eyeContainer'>
-                            <div class='eye eyeLeft'></div>
-                            <div class='eye eyeRight'></div>
-                        </div>
-                    </div>
-                    
-                    <img src="files/images/billMurray.png" alt="Bill Murray" width="280" height="210">
-                </div>
-                <div class="personLayoutInfo col-1-1 textAlignCenter">
-                    <h5 class="name">Bill Murray</h5>
-                    <p class="bio">Test Person #2</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<audio id="player" preload="none">
+	<source src="files/music/ocean_man.mp3" />
+</audio>
 
+<body>
+	<div id="container" class="grid" v-on:keyup.esc="Close">
+		<div id="mainTextOutput" class="col-1-1">
+			<div class="col-1-12 hide-on-mobile"></div>
+			<canvas id="canvas" class="col-10-12 mobile-col-1-1" hidden></canvas>
+			<textarea id="outputConsoleText" class="col-10-12 mobile-col-1-1" readonly="true">       Press 'Enter' to submit statement.</textarea>
+			<div class="col-1-12 hide-on-mobile"></div>
+		</div>
+		
+		<div id="mainTextInput" class="col-1-1">
+			<div class="col-1-12 hide-on-mobile"></div>
+			<input id="inputConsoleText" class="col-10-12 mobile-col-1-1" type="input" autofocus="autofocus" autocomplete="off" v-on:keyup.up.down="UpDown(event)" v-on:keyup.enter="EnterPressed">
+			<div class="col-1-12 hide-on-mobile"></div>
+		</div>
+		
+		<div id="mainTextHelp" class="col-1-1">
+			<div class="col-1-12 hide-on-mobile"></div>
+			<div id="helpDockButton" class="col-10-12 mobile-col-1-1" v-if="session.helpShow == 0">
+				<div class="col-5-12 hide-on-mobile"></div>
+				<div class="col-2-12">
+					<div class="fuller-button fuller-button_green" v-on:click="session.helpShow = 1">HELP!</div>
+				</div>
+				<div class="col-5-12 hide-on-mobile"></div>
+			</div>
+			<div v-cloak id="helpDock" class="col-10-12 mobile-col-1-1" v-else>
+				<span id="helpDockClose" v-on:click="session.helpShow = 0">X</span>
+				<p class="textAlignCenter">-- Information Section --</p>
+				<p>This is a help dock!</p>
+			</div>
+			<div class="col-1-12 hide-on-mobile"></div>
+		</div>
+		
+
+		<img id="neo" src="images/neo.png" alt="NEO" hidden>
+		
+		<center id="frmLogin">
+			<div id="conLogin">
+				<h3>Login</h3>
+				<input type="text" id="logUser" name="logUser" placeholder="Username" required>
+				<input type="password" id="logPass" name="logPass" placeholder="*******" required>
+				<input type="button" id="logLogin" onclick="Login()" value="Login">
+			</div>
+		</center>
+
+		<center id="frmEdit" hidden>
+			<div id="conEdit">
+				<div id="editColorAll">
+					<div class="editColorEach">
+						<label for="bodyColorSelector" class="editColorLabel">Body</label>
+						<input type='text' id="bodyColorSelector" class="editColorSelect"/>
+					</div>
+					<div class="editColorEach">
+						<label for="outputColorSelector" class="editColorLabel">Output</label>
+						<input type='text' id="outputColorSelector" class="editColorSelect"/>
+					</div>
+					<div class="editColorEach">
+						<label for="inputColorSelector" class="editColorLabel">Input</label>
+						<input type='text' id="inputColorSelector" class="editColorSelect"/>
+					</div>
+				</div>
+				<div id="editFontAll">
+					<div class="editFontEach">
+						<label for="inputFontFamily">Family</label>
+					</div>
+					<div class="editFontEach">
+						<label for="inputFontFamily">Size</label>
+					</div>
+					<div class="editFontEach">
+						<label for="inputFontFamily">Color</label>
+					</div>
+				</div>
+			</div>
+		</center>
+
+		<div id="signInBanner" hidden>
+			<!-- Replace with https://www.quackit.com/css/codes/marquees/ -->
+			<!-- <marquee id="marqLogin">{{session.user}}</marquee>  -->
+		</div>
+	</div>
+	<span id="printSpan" class="textAlignCenter" hidden><br><br><br><br>☠️&nbsp;&nbsp;&nbsp;Don't Print My Website&nbsp;&nbsp;&nbsp;☠️<br><br>👽</span>
+
+	
 
 <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script> -->
+
+<!-- Spectrum - Color Picker API -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.0/spectrum.min.js"></script>
+
+<!-- Validate.js -->
+	<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.12.0/validate.min.js"></script> -->
+
+<!-- SweetAlert2 -->
+    <script type="text/javascript" src="js/sweetalert2.min.js"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/sweetalert2@7.15.1/dist/sweetalert2.all.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> -->
+
+<!-- Firebase -->
+	<!-- <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script> -->
+
+<!-- Vue.js -->
+    <!-- <script type="text/javascript" src="js/vue2.min.js"></script> -->
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+
+<!-- VueFire -->
+    <!-- <script src="https://unpkg.com/vuefire/dist/vuefire.js"></script> -->
+
+<!-- Lodash -->
+    <script src="js/lodash.min.js"></script>
 
 <!-- JS File -->
 	<script type="text/javascript" src="js/refMain.js"></script>
