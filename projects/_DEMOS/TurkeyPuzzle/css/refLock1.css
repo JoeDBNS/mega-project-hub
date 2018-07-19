@@ -1,0 +1,193 @@
+
+@font-face {
+	font-family: "digital7";
+	src:url("../files/fonts/digital-7.ttf") format('truetype');
+}
+
+body {
+	background-color: rgb(92, 92, 94);
+}
+
+#container {
+	width: 780px;
+	height: 800px;
+	margin: auto;
+	padding-top: 200px;
+}
+
+.row {
+	font-family: "digital7";
+	font-size: 70px;
+	color: rgb(35, 206, 35);
+	width: 100%;
+}
+
+#row1 {
+	height: 70px;
+}
+
+#row2 {
+	height: 80px;
+	margin-top: 30px;
+}
+
+.numDisp {
+	float: left;
+	width: 65px;
+	height: 100%;
+	background-color: rgb(16, 4, 68);
+	border: 2px ridge rgb(131, 33, 33);
+}
+
+.numDisp span {
+	width: 70px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.numChk {
+	float: left;
+	width: 80px;
+	height: 100%;
+}
+
+.row1AddMargin {
+	margin-left: 64px;
+}
+
+#numDisp1 {
+	margin-left: 20px;
+}
+
+.row2AddMargin {
+	margin-left: 54px;
+}
+
+#numChk1 {
+	margin-left: 12px;
+}
+
+#txtDiv {
+	margin-top: 200px;
+}
+
+#txtDiv center {
+	color: rgb(101, 101, 102);
+}
+
+@import url('normalize.css');
+@import url('demo.css');
+
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+}
+
+.switch {
+	margin: auto;
+	position: relative;
+}
+
+.switch label {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: block;
+}
+
+.switch input {
+	top: 0; 
+	right: 0; 
+	bottom: 0; 
+	left: 0;
+	opacity: 0;
+	z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.switch.demo2 {
+	width: 50px;
+	height: 80px;
+}
+
+.switch.demo2 label {
+	background: #cbc7bc;
+	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow:
+		inset 0 1px 0 white,
+		0 0 0 1px #999,
+		0 0 5px 1px rgba(0,0,0,0.2),
+		0 2px 0 rgba(255,255,255,0.6),
+		inset 0 10px 1px #e5e5e5,
+		inset 0 11px 0 rgba(255,255,255,0.5),
+		inset 0 -45px 3px #ddd;
+}
+
+.switch.demo2 label:after {
+	content: "";
+	position: absolute;
+	top: -20px;
+	left: -25px;
+	bottom: -20px;
+	right: -25px;
+	z-index: -1;
+}
+
+.switch.demo2 input:checked ~ label {
+	background: #d2cbc3;
+	box-shadow:
+		inset 0 1px 0 white,
+		0 0 0 1px #999,
+		0 0 5px 1px rgba(0,0,0,0.2),
+		inset 0 -10px 0 #aaa,
+		0 2px 0 rgba(255,255,255,0.1),
+		inset 0 45px 3px #e0e0E0,
+		0 8px 6px rgba(0,0,0,0.18);
+}
+
+#btnDiv {
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin-top: 80px;
+}
+
+#btnTag {
+	width: 100%;
+}
+
+#btnCheck {
+    width: 100px;
+	background: rgb(131, 33, 33);
+    border-radius: 10px;
+	border-color: rgb(16,4,68);
+    color: rgb(16,4,68);
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 22px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+}
+
+#linkHome {
+	background-color: rgb(131, 33, 33);
+	color: rgb(16,4,68);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	width: 48px;
+	height: 24px;
+	position: fixed;
+	margin-top: -130px;
+	padding: 1px 4px 3px 4px;
+	border: 2px	groove rgb(16,4,68);
+	border-radius: 5px;
+}

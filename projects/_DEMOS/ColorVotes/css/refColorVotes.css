@@ -1,0 +1,68 @@
+body {
+    background-color: #acc0e0;
+}
+#container {
+    margin: auto;
+    width: 500px;
+}
+#frstLevelSec{
+    display: inline-block;
+    width: 100%;
+}
+#headerText {
+    text-align: center;
+}
+#divChart {
+    outline: black solid 1px;
+}
+#divColorButtons {
+    margin-top: 10px;
+}
+#btnColorHeader {
+    width: 40px;
+    margin: auto;
+    margin-bottom: 14px;
+}
+.btnColor {
+    float: left;
+    width: 23%;
+    height: 100px;
+    border: 2px ridge brown;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btnLeft {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.btnRight {
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.btnTop {
+    margin-bottom: 18px;
+}
+#btnRed {
+    background-color: Red;
+}
+#btnBlue {
+    background-color: Blue;
+}
+#btnGreen {
+    background-color: Green;
+}
+#btnYellow {
+    background-color: Yellow;
+}
+#b {
+    color: red;
+}
+#e {
+    color: blue;
+}
+#s {
+    color: green;
+}
+#t {
+    color: yellow;
+}

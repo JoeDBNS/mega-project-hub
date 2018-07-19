@@ -1,0 +1,72 @@
+<!--==================================================
+
+Date: 09-25-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FIN</title>
+
+<!-- JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refLock5.css">
+</head>
+<body>
+	<div id="container">
+		<a id="linkHome" href="TurkeyQuest.html">Home</a>
+	
+		<div id="txtDiv">
+			<center id="txtTag">
+				<!-- <input id="btnCheck" type="button" value="Check"> -->
+				<h2>Backwhacking Is For Cheaters.</h2>
+				<br><br><br>
+				<h3>Cheaters Don't Get Turkeys.</h3>
+			</center>
+			<center id="txtShow" hidden>
+				<h2 id="line1"></h2>
+				<h2 id="line2"></h2>
+				<h2 id="line3"></h2>
+				<h2 id="line4"></h2>
+				<h2 id="line5"></h2>
+				<h2 id="line6"></h2>
+				<br> > <br><br>
+				<h2 id="line7"></h2>
+				<h2 id="line8"></h2>
+				<h2 id="line9"></h2>
+				<h2 id="line10"></h2>
+				<br> > <br><br>
+				<h2 id="line11"></h2>
+				<h2 id="line12"></h2>
+				<h2 id="line13"></h2>
+				<h2 id="line14"></h2>
+			</center>
+		</div>
+	</div>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+		authDomain: "turkey-hunt.firebaseapp.com",
+		databaseURL: "https://turkey-hunt.firebaseio.com",
+		projectId: "turkey-hunt",
+		storageBucket: "turkey-hunt.appspot.com",
+		messagingSenderId: "976430422621"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refLock5.js"></script>
+</body>
+</html>

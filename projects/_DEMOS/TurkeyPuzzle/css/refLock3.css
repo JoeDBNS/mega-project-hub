@@ -1,0 +1,103 @@
+body {
+    background-color: rgb(92, 92, 94);
+}
+
+#container {
+	width: 780px;
+	height: 800px;
+	margin: auto;
+	padding-top: 80px;
+}
+
+#linkHome {
+	background-color: rgb(131, 33, 33);
+	color: rgb(16,4,68);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	width: 48px;
+	height: 24px;
+	position: fixed;
+	padding: 1px 4px 3px 4px;
+	border: 2px	groove rgb(16,4,68);
+	border-radius: 5px;
+}
+
+#content {
+    margin-top: 100px;
+}
+
+.imageRow {
+	height: 100px;
+}
+
+.imageRow a {
+	text-decoration: none;
+}
+
+.imageRow img {
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+}
+
+#imgDown1 {
+	margin-left: 85px;
+}
+
+#imgDown2 {
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+#imgDown3 {
+	margin-right: 85px;
+}
+
+.inputRow {
+	margin-top: 40px;
+}
+
+.inputRow input {
+	font-size: 1.8em;
+	display: inline-block;
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+#inpDown1 {
+	margin-left: 85px;
+}
+
+#inpDown2 {
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+#inpDown3 {
+	margin-right: 85px;
+}
+
+#btnDiv {
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin-top: 100px;
+}
+
+#btnCheck {
+	width: 100px;
+	background: rgb(131, 33, 33);
+	border-radius: 10px;
+	border-color: rgb(16, 4, 68);
+	color: rgb(16, 4, 68);
+	cursor: pointer;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 22px;
+	height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	user-select: none;
+}

@@ -1,0 +1,128 @@
+/* Text Aligns */
+    .textAlignLeft {
+        text-align: left;
+    }
+    .textAlignCenter {
+        text-align: center;
+    }
+    .textAlignRight {
+        text-align: right;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        .mobile-textAlignLeft {
+            text-align: left;
+        }
+        .mobile-textAlignCenter {
+            text-align: center;
+        }
+        .mobile-textAlignRight {
+            text-align: right;
+        }
+    }
+
+/* Simple Grid */
+    body {
+        margin: 0;
+        background-color: rgb(40, 154, 255);
+    }
+    .grid {
+        padding: 40px 0 40px 0;
+    }
+    [class*='col-'] {
+        padding-right: 0;
+    }
+    @media handheld, only screen and (max-width: 767px) {
+        [class*='col-'] {
+            margin: 0;
+        }
+        p {
+            -webkit-margin-before: 0;
+            -webkit-margin-after: 0;
+        }
+        .personLayoutInfo {
+            margin-top: -13px;
+        }
+    }
+
+/* Person Style */
+    .personLayout {
+        overflow: auto;
+        width: 280px;
+        margin: auto;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    .personLayout:hover {
+        box-shadow: 0 0 0 2px rgb(11, 72, 151);
+    }
+    .personLayoutInfo {
+        background-color: rgb(194, 194, 194);
+        color: black;
+        margin-top: -4px;
+        overflow: auto;
+    }
+    .personLayoutInfo .name {
+        font-family: sans-serif;
+        text-shadow: none;
+        margin: 16px 0 14px 0;
+        padding: 8px;
+        height: 2rem;
+    }
+    .personLayoutInfo .bio {
+        margin-bottom: 1em;
+        padding: 0 20px 0 20px;
+    }
+    /* Goofy Eyes */
+        /* .person:hover .goofyEyes {
+            display: inline-block;
+        } */
+        .goofyEyes {
+            /* display: none; */
+            position: absolute;
+        }
+        .eye {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            height: 26px;
+            width: 26px;
+            background: rgb(248, 248, 248);
+            border: 1px solid black;
+        }
+        .eye:after {
+            position: absolute;
+            bottom: 17px;
+            right: 10px;
+            width: 8px;
+            height: 8px;
+            background: #000;
+            border-radius: 50%;
+            content: " ";
+        }
+    /* Each Person */
+            /* Total Height: 324 */
+            /* Total Width: 280 */
+        /* Bill Murray */
+            .eyesForBillMurray {
+                height: 238px;
+                padding-top: 86px;
+
+                width: 166px;
+                padding-left: 110px;
+            }
+            .eyesForBillMurray .eyeLeft {
+                margin-right: 8px;
+                margin-bottom: 0px;
+            }
+        /* Tom Hanks */
+            .eyesForTomHanks {
+                height: 252px;
+                padding-top: 72px;
+
+                width: 160px;
+                padding-left: 116px;
+            }
+            .eyesForTomHanks .eyeLeft {
+                margin-right: 8px;
+                margin-bottom: 0px;
+            }

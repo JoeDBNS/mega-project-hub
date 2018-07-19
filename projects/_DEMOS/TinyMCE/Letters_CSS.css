@@ -1,0 +1,140 @@
+@media print {
+	#tinyTextarea_tbl {
+		display: none;
+	}
+	#btnPrint {
+		display: none;
+	}
+	#selectReport {
+		display: none;
+	}
+	#addressee {
+		display: none;
+	}
+	#container {
+		box-shadow: none;
+		margin: 0;
+		padding-bottom: 0;
+		transform: scale(1);
+	}
+}
+@page {
+	margin: 0;
+	margin-top:.5in;
+	margin-bottom:.25in;
+}
+@page :first {
+	margin-top: 0;
+}
+* {
+	float: left;
+}
+body {
+	font-family: century schoolbook;
+	font-size: 17px;
+	background-color: white;
+	width: 550px;
+}
+#container {
+	transform: scale(.60);
+	margin-left: -174px;
+	margin-top: -250px;
+	width: 900px;
+	box-shadow: 1px 1px 2px black;
+	padding-bottom: .5in;
+}
+svg {
+	overflow: hidden;
+}
+p {
+	margin: 0;
+	width: 100%;
+}
+#tinyTextarea_tbl {
+	margin-left: .5in;
+}
+#header {
+	margin-top: -10px;
+	margin-left: 28px;
+}
+#printContent {
+	width: 7in;
+	margin-left: .8in;
+	margin-right: .8in;
+	margin-top: -50px;
+}
+.sepLeft {
+	float: left;
+	width: 1.25in;
+}
+.sepRight {
+	float: left;
+	width: 5.75in;
+}
+.sepMedLeft {
+	float: left;
+	width: 1.5in;
+}
+.sepMedRight {
+	float: left;
+	width: 5.5in;
+}
+.sepSmlLeft {
+	float: left;
+	width: .75in;
+}
+.sepSmlRight {
+	float: left;
+	width: 6.25in;
+}
+.sepExtSmlLeft {
+	float: left;
+	width: .50in;
+}
+.sepExtSmlRight {
+	float: left;
+	width: 6.5in;
+}
+#tinyTextarea {
+	padding-left: .5in;
+	padding-right: .5in;
+	height: 7in;
+	width: 7in;
+}
+#tinyTextarea_parent {
+	display: none;
+}
+#topField {
+	text-align: center;
+}
+.signature {
+	text-indent: 3.5in;
+}
+.paragraph {
+	text-indent: .5in;
+}
+.fullParagraph {
+	margin-left: .5in;
+}
+.indent {
+	text-indent: 1in;
+}
+.fullIndent {
+	margin-left: 1in;
+}
+#letterTitle {
+	text-align: right;
+}
+.highlight {
+	background-color: lightgray;
+}
+.hght1line {
+	height: 1rem;
+}
+.smlHeight {
+	height: .3em;
+}
+.bullets {
+	text-indent: 1in;
+	font-weight: bold;
+}

@@ -1,0 +1,92 @@
+/* SimpleGrid */
+    .col-1-1 {
+        padding: 0;
+    }
+
+/* Text-Align */
+    .textAlignCenter {
+        text-align: center;
+    }
+
+/* prev-formatting */
+    h1, h2, h3,
+    h4, h5, h6,
+    .pnlContainer-header {
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+    }
+    .infoSection {
+        background-color: #eeeeee;
+        width: 100%;
+        padding: 10px;
+        border-radius: 0 0 14px 14px;
+    }
+    .infoSection-header {
+        width: 100%;
+        padding: 6px 25px 6px 25px;
+        margin-top: 10px;
+        margin-bottom: 0;
+        font-size: 18pt;
+        background-color: #a9dcdd;
+        border-radius: 14px 14px 0 0;
+        cursor: pointer;
+    }
+    .ui-accordion-header-collapsed {
+        border-radius: 14px;
+    }
+    input, select {
+        width: 100%;
+        padding: 0 .5em 0 .5em;
+    }
+    .row {
+        height: 2em;
+        margin-top: .4em;
+        padding-top: .5em;
+    }
+    .row * {
+        height: 100%;
+    }
+    .isOptional {
+        border: 1px dashed #7ca1f8;
+    }
+    .isOptMissing {
+        border: 2px solid #7ca1f8;
+    }
+    .isRequired {
+        border: 1px dashed lightpink;
+    }
+    .isMissing {
+        border: 2px solid red;
+    }
+    .likeIsRequired {
+        border: 2px solid red;
+    }
+
+/* custom-formatting */
+    body {
+        background-color: #225C94;
+    }
+    .infoSection-header {
+        border: 1px solid black;
+        background-color: #A9DCDD;
+    }
+    .infoSection {
+        border: solid black;
+        border-width: 0 1px 1px 1px;
+        height: 560px !important;
+    }
+    #header {
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
+    #header h1 {
+        margin-bottom: 0;
+        font-size: 52px;
+    }
+    #header h2 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+    #header h2 {
+        margin-bottom: 24px;
+    }

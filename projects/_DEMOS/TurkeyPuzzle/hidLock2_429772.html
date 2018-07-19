@@ -1,0 +1,104 @@
+<!--==================================================
+
+Date: 09-25-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>It's Just Math.</title>
+
+<!-- JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refLock2.css">
+</head>
+<body>
+	<div id="container">
+		<a id="linkHome" href="TurkeyQuest.html">Home</a>
+
+		<div id="txtContent">
+			<table id="contentTable1">
+				<tr class="tabRow">
+					<th><u>&nbsp;a&nbsp;</u></th>
+					<th><u>&nbsp;b&nbsp;</u></th>
+				</tr>
+				<tr class="tabRow">
+					<th>
+						Cold in summer, hot in winter,<br>
+						Einstein sits atop his shelf.<br>
+						If in search for a clue, as are you,<br>
+						he'd simply look inside himself.
+					</th>
+					<th>
+						Blood stains on the walls<br>
+						and long daunting halls,<br>
+						but what other nightmares await?<br>
+						Maybe Phil knows.
+					</th>
+				</tr>
+				<tr class="tabRow">
+					<th>&nbsp;</th>
+				</tr>
+				<tr class="tabRow">
+					<th>&nbsp;</th>
+				</tr>
+				<tr class="tabRow">
+					<th><u>&nbsp;c&nbsp;</u></th>
+					<th><u>&nbsp;d&nbsp;</u></th>
+				</tr>
+				<tr class="tabRow">
+					<th>
+						Revisit the book<br>
+						and I'm sure you'll see,<br>
+						a note hidden amongst the heroin<br>
+						on page four forty three.
+					</th>
+					<th>
+						Not months, not hours,<br>
+						but something in between,<br>
+						find the sum of each member<br>
+						for the day that they were first seen.<br>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+		<div id="numContent">
+			<span id="content2">(a + (b * 2) - 1.5c + 4d) / 6</span>
+		</div>
+		
+		<div id="subContent">
+			<input class="answerNum" id="topInput" type="number" min="0" max="9" placeholder="0">
+			<input class="answerNum" id="midInput" type="number" min="0" max="9" placeholder="0">
+			<input class="answerNum" id="botInput" type="number" min="0" max="9" placeholder="0">
+		</div>
+		
+		<div id="btnDiv"><center id="btnTag"><input id="btnCheck" type="button" value="Check"></center></div>
+	</div>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+		authDomain: "turkey-hunt.firebaseapp.com",
+		databaseURL: "https://turkey-hunt.firebaseio.com",
+		projectId: "turkey-hunt",
+		storageBucket: "turkey-hunt.appspot.com",
+		messagingSenderId: "976430422621"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refLock2.js"></script>
+</body>
+</html>

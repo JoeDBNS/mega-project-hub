@@ -20,10 +20,10 @@ Project: mega-project-hub
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 
 <!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Capriola" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono" rel="stylesheet">
 
 <!-- SweetAlert2 -->
     <script type="text/javascript" src="js/sweetalert2.min.js"></script>
@@ -39,11 +39,14 @@ Project: mega-project-hub
 	<div id="container" class="grid">
 		<div class="hide-on-mobile">
 			<div id="aboutMe" class="col-1-1">
+				<div class="col-1-12"></div>
+				<h2 class="secHeader col-10-12">Who is Joe Davis?</h2>
+				<div class="col-1-12"></div>
 				<div id="mePicture" class="col-1-2">
 					<div id="picFrameOuter">
 						<div id="picFrameMiddle">
 							<div id="picFrameInner">
-								<!-- <img src="images/me.jpg" alt="Classy Picture of Joe Davis"> -->
+								<img id="picMe" width="380px" height="480px">
 							</div>
 						</div>
 					</div>
@@ -63,18 +66,61 @@ Project: mega-project-hub
 
 			<div class="col-1-12"></div>
 			<div id="desk" class="col-10-12">
+				<h2 class="secHeader">What does Joe do?</h2>
 				<div id="deskComputer" class="col-2-3">
+					<div id="screenStickyNote">
+						<span><b>1)</b> Turn On PC</span>
+						<br>
+						<span><b>2)</b> Select Project</span>
+					</div>
 					<div class="screen">
-						<div id="screenStickyNote">
-							<span><b>1)</b> Turn On PC</span>
-							<br>
-							<span><b>2)</b> Select Project</span>
-						</div>
-						<iframe id="screenFrame" style="display:none;" v-bind:src="session.selectedProject.folder" frameborder="0" v-show="session.showComputerScreen == 1"></iframe>
+						<!-- WORK IN PROGRESS -->
+						<!--<div id="screenContainer" class="col-1-1" v-show="session.showComputerScreen == 1" v-cloak>
+							<div id="screenContent" class="col-1-1">
+								<div id="screenNav" class="col-1-1">
+									<div id="screenNavBar" class="col-10-12">&nbsp;</div>
+									<div id="screenNavButton" class="col-2-12 textAlignCenter">
+										<div id="screenNavButtonMin" class="col-1-2">-</div>
+										<div id="screenNavButtonExit" class="col-1-2">X</div>
+									</div>
+								</div>
+								<div class="col-1-12"></div>
+								<div id="screenContentProject" class="col-11-12">
+									<p class="name col-9-12">
+										<span class="left col-2-12">Project: </span>
+										<span class="col-1-12"></span>
+										<span class="right col-8-12">{{session.selectedProject.name}}</span>
+										<div class="col-1-12 buttonContainer">
+											<a v-bind:href="session.selectedProject.folder" target="_blank" tabindex="2">
+												<img class="button" src="images/newTab.png" alt="Open in new tab">
+											</a>
+										</div>
+									</p>
+									<p class="date col-1-1">{{session.selectedProject.date}}</p>
+								</div>
+								<div class="col-1-1 screenshot" v-for="(shot, index) in session.selectedProject.screenshots">
+									<p>Screenshot #{{index + 1}}</p>
+									<img v-bind:src="shot.file" alt="Project Screenshot">
+								</div>
+								<div id="screenContentShot1" class="col-1-1 screenshot">
+									<p>Screenshot #1</p>
+									<img v-bind:src="session.selectedProject.shot1" alt="Project Screenshot #1">
+								</div>
+								<div id="screenContentShot2" class="col-1-1 screenshot">
+									<p>Screenshot #2</p>
+									<img v-bind:src="session.selectedProject.shot2" alt="Project Screenshot #2">
+								</div>
+								<div id="screenContentShot3" class="col-1-1 screenshot">
+									<p>Screenshot #3</p>
+									<img v-bind:src="session.selectedProject.shot3" alt="Project Screenshot #3">
+								</div>
+							</div>
+						</div> -->
+						<iframe id="screenFrame" style="display:none;" v-bind:src="session.selectedProject.folderDemo" frameborder="0" v-show="session.showComputerScreen == 1"></iframe>
 					</div>
 					<div class="stand">
 						<div class="button" v-cloak>
-							<p class="textAlignCenter off" v-show="session.showComputerScreen == 0" @click="session.showComputerScreen = 1"></p>
+							<p class="textAlignCenter off" v-show="session.showComputerScreen == 0" @click="session.showComputerScreen = 1; session.selectedProject = Projects[0]"></p>
 							<p class="textAlignCenter on" v-show="session.showComputerScreen == 1" @click="session.showComputerScreen = 0"></p>
 						</div>
 					</div>
@@ -87,7 +133,7 @@ Project: mega-project-hub
 						<div class="content textAlignCenter">
 							<ul id="projectList">
 								<u>Project Demos:</u>
-								<li v-cloak class="project" v-for="project in Projects" @click="ProjectSelect(project)"><span>{{project.name}}</span></li>
+								<li v-cloak class="project" v-for="project in Projects" @click="ProjectSelect(project)" @keyup.enter="ProjectSelect(project)" tabindex="1"><span>{{project.name}}</span></li>
 							</ul>
 						</div>
 					</div>
@@ -105,8 +151,10 @@ Project: mega-project-hub
 					<div class="col-1-12"></div>
 				</div>
 			</div>
-
-			<div id="aboutWork" class="col-1-1">
+			
+			<div class="col-1-12"></div>
+			<div id="aboutWork" class="col-10-12">
+				<h2 class="secHeader">Where has Joe worked?</h2>
 				<div id="workBoardBorder" class="col-1-1">
 					<div id="workBoard" class="col-1-1">
 						<div class="resume">
@@ -124,8 +172,12 @@ Project: mega-project-hub
 					</div>
 				</div>
 			</div>
+			<div class="col-1-12"></div>
 
 			<div id="aboutSkills" class="col-1-1">
+				<div class="col-1-12"></div>
+				<h2 class="secHeader col-10-12">What are Joe's skills?</h2>
+				<div class="col-1-12"></div>
 				<div class="col-3-12"></div>
 				<div id="fridge" class="col-6-12">
 					<div id="fridgeFreezer" class="col-1-1">
@@ -181,9 +233,6 @@ Project: mega-project-hub
 
 			<div id="feedback" class="col-1-1">
 				<p>Thanks for stopping by!</p>
-				<!-- <p>Constructive criticism provides all the benefits of failure without all the bad parts.</p>
-				<p>If you have an urge to share some constructive criticism, I'd truly like to hear your ideas!</p>
-				<textarea name="feedbackInput" id="feedbackInput" cols="30" rows="10"></textarea> -->
 			</div>
 		</div>
 
@@ -210,6 +259,31 @@ Project: mega-project-hub
 				<div class="mobSkil" v-for="skill in Skills">{{skill.name}}</div>
 			</div>
 		</div>
+
+		<!-- LinkedIn -->
+		<!-- https://www.linkedin.com/badges/profile/create?vanityname=joseph-davis-087ba2b2&trk=profile-badge-public-profile -->
+		<div id="secLinkedIn" class="col-1-1">
+			<div class="col-1-2">
+				<div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="joseph-davis-087ba2b2">
+					<a class="LI-simple-link" href='https://www.linkedin.com/in/joseph-davis-087ba2b2?trk=profile-badge'>Joseph Davis</a>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="joseph-davis-087ba2b2">
+					<a class="LI-simple-link" href='https://www.linkedin.com/in/joseph-davis-087ba2b2?trk=profile-badge'>Joseph Davis</a>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="joseph-davis-087ba2b2">
+					<a class="LI-simple-link" href='https://www.linkedin.com/in/joseph-davis-087ba2b2?trk=profile-badge'>Joseph Davis</a>
+				</div>
+			</div>
+			<div class="col-1-2">
+				<div class="LI-profile-badge" data-version="v1" data-size="large" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="joseph-davis-087ba2b2">
+					<a class="LI-simple-link" href='https://www.linkedin.com/in/joseph-davis-087ba2b2?trk=profile-badge'>Joseph Davis</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<span id="printSpan" class="textAlignCenter" hidden><br><br><br><br><br><br>☠️&nbsp;&nbsp;&nbsp;Don't Print My Website&nbsp;&nbsp;&nbsp;☠️<br><br>👽</span>
@@ -224,10 +298,13 @@ Project: mega-project-hub
     <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
 
 <!-- Lodash -->
-    <script src="js/lodash.min.js"></script>
+    <!-- <script src="js/lodash.min.js"></script> -->
 
 <!-- JS File -->
 	<script type="text/javascript" src="js/refMain.js"></script>
+
+<!-- LinkedIn -->
+	<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </body>
 
 </html>

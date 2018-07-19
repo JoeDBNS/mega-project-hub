@@ -13,11 +13,23 @@ Project: mega-project-hub
 	position: relative;
 }
 body {
+	margin: 0;
 	/* background-color: #e8f9ff; */
+	/* background-color: rgb(250, 241, 234); */
 	/* background-color: #C7BDA2; */
-	background-color: #d3ffd2;
 	/* background-color: #ffbdb3; */
-	/* font-family: 'Courier New', Courier, monospace; */
+	background-color: #d3ffd2;
+	/* background: url("../images/testPattern3.png"); */
+}
+#container {
+	box-shadow: 2px 1px 4px rgb(230, 208, 189) inset, -2px -1px 4px rgb(230, 208, 189) inset;
+	background-color: lightyellow;
+	padding: 0 30px 0 30px;
+	margin-top: -4px;
+}
+.secHeader {
+	font-family: 'Cutive Mono', monospace;
+	padding-bottom: 30px;
 }
 
 /* Text Aligns */
@@ -63,6 +75,7 @@ body {
 			height: 500px;
 			margin: auto;
 			border: 6px ridge rgb(145, 93, 51);
+			box-shadow: 2px 2px 5px grey;
 		}
 		#picFrameMiddle {
 			width: 390px;
@@ -74,9 +87,17 @@ body {
 			height: 480px;
 			border: 5px ridge rgb(177, 142, 113);
 		}
-		#mePicture img {
+		#picMe {
+			background: url('../images/me-Pirate_full.png');
 			width: 380px;
 			height: 480px;
+			-webkit-transition: .25s; /* Safari */
+			transition: .25s;
+		}
+		#picMe:hover {
+			background: url('../images/me.png');
+			-webkit-transition: .25s; /* Safari */
+			transition: .25s;
 		}
 
 /* Desk */
@@ -87,23 +108,75 @@ body {
 		#deskComputer .screen {
 			height: 440px;
 			background-color: black;
-			/* box-shadow: 8px 8px #c3c3c3 inset, -8px -8px #c3c3c3 inset; */
-			box-shadow: 8px 8px #949393 inset, -8px -8px #949393 inset;
-			/* background:url(../images/loader.svg) center center no-repeat; */
+			box-shadow: 2px 2px 5px rgb(102, 102, 102);
+			border: 8px solid #949393;
+			border-radius: 3px;
+			margin-top: -80px;
+			overflow: auto;
 		}
-		#deskComputer .screen iframe {
+		#screenFrame {
 			position: absolute;
 			top: 0;
 			left: 0;
-			width: calc(100% - 15px);
-			height: calc(100% - 16px);
-			padding: 8px;
+			width: 100%;
+			height: 100%;
 		}
+		/* #screenContainer {
+			background-color: white;
+			padding: 8px;
+			min-height: 100%;
+			background: linear-gradient(to bottom right, rgb(57, 57, 248), green);
+		}
+		#screenContent {
+			background-color: white;
+			border: 1px rgb(170, 170, 170) solid;
+			border-radius: 3px;
+			padding: 0 4px 4px 4px;
+		}
+		#screenNav {
+			height: 1em;
+		}
+		#screenNavBar {
+			background-color: rgb(239, 253, 255);
+		}
+		#screenNavButton div {
+			border-radius: 3px;
+			cursor: pointer;
+			user-select: none;
+		}
+		#screenNavButtonMin {
+			background-color: rgb(113, 221, 238);
+		}
+		#screenNavButtonExit {
+			background-color: rgb(241, 126, 126);
+		}
+		#screenContentProject .name .left {
+			font-size: 20px;
+			margin-top: 3px;
+		}
+		#screenContentProject .name .right {
+			font-size: 24px;
+			padding-left: 12px;
+		}
+		#screenContentProject .date {
+			font-size: 12px;
+			padding-left: 20px;
+			margin-top: 0px;
+		}
+		#screenContentProject .buttonContainer {
+			padding: 18px 0 0 0;
+		}
+		#screenContent .screenshot p {
+			padding-left: 30px;
+		} */
 		#deskComputer .stand {
 			margin: auto;
+			margin-top: 1px;
 			width: 120px;
 			height: 34px;
 			background-color: black;
+			box-shadow: 2px 2px 5px rgb(102, 102, 102);
+			border-radius: 3px;
 		}
 		#deskComputer .stand .button {
 			position: absolute;
@@ -127,8 +200,8 @@ body {
 		/* Sticky Note */
 			#screenStickyNote {
 				position: relative;
-				top: -14px;
-				left: -14px;
+				top: -20px;
+				left: -20px;
 				width: 74px;
 				height: 66px;
 				overflow: hidden;
@@ -147,7 +220,7 @@ body {
 		#deskBoard .board {
 			height: 380px;
 			background-color: white;
-			box-shadow: 8px 8px #585858 inset, -8px -8px #585858 inset;
+			box-shadow: 8px 8px #585858 inset, -8px -8px #585858 inset, 2px 2px 5px rgb(102, 102, 102);
 			font-family: 'Gloria Hallelujah';
 		}
 		#deskBoard .content {
@@ -159,6 +232,7 @@ body {
 		}
 		#projectList {
 			list-style: none;
+			line-height: 1.2rem;
 			margin-top: 4px;
 			padding: 0;
 			overflow: hidden;
@@ -171,6 +245,7 @@ body {
     		user-select: none;
 			cursor: pointer;
 			color: blue;
+			margin-top: 12px;
 		}
 		#deskBoard .project:nth-child(odd) {
 			transform: rotate(1deg);
@@ -179,6 +254,9 @@ body {
 			transform: rotate(-1deg);
 		}
 		#deskBoard .project:hover {
+			transform: scale(1.1);
+		}
+		#deskBoard .project:focus {
 			transform: scale(1.1);
 		}
 		#deskBoard .project:before {
@@ -191,20 +269,22 @@ body {
 		#deskTable .top {
 			background-color: rgb(180, 137, 112);
 			height: 16px;
-			box-shadow: 0 2px rgb(228, 181, 155) inset;
+			box-shadow: 0 2px rgb(228, 181, 155) inset, 2px 2px 5px gray;
 		}
 		#deskTable .leg {
+			box-shadow: 2px 2px 4px gray;
 			background-color: rgb(180, 137, 112);
 			height: 10px;
 		}
 
 /* About Work */
 	#aboutWork {
-		padding-top: 90px;
+		padding-top: 70px;
 	}
 	/* Work Board */
 		#workBoardBorder {
 			border: 6px solid silver;
+			box-shadow: 2px 2px 5px grey;
 		}
 		#workBoard {
 			border: 1px solid gray;

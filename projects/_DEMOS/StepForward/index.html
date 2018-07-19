@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>StepForward Demo</title>
+
+<!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    
+<!-- SimpleGrid -->
+    <link rel="stylesheet" type="text/css" href="css/simplegrid.css">
+
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refMain.css">
+</head>
+
+<body>
+    <div id="header" class="grid textAlignCenter">
+        <h1>Step Forward Michigan</h1>
+        <h2>Application</h2>
+        <h3>Please complete the loan application below.</h3>
+    </div>
+
+    <form id="frmData" class="grid" role="form">
+        <h2 class="col-1-1 mobile-col-1-1 infoSection-header">Borrower</h2>
+        <div class="col-1-1 mobile-col-1-1 infoSection">
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="customerID" class="col-2-12 mobile-col-2-12">Case #</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" id="customerID" name="customerID" placeholder="Case #" value="T-123.4-5" title="You cannot change your Case #" readonly="True">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Email_Address" class="col-2-12 mobile-col-2-12">Email Address</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="Email_Address" name="Email_Address" placeholder="Email Address" title="Email Address">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="first_name" class="col-2-12 mobile-col-2-12">First Name</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="first_name" name="first_name" placeholder="First Name" title="First Name">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="last_name" class="col-2-12 mobile-col-2-12">Last Name</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="last_name" name="last_name" placeholder="Last Name" title="Last Name">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Primary_Phone" class="col-2-12 mobile-col-2-12">Primary Phone</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="Primary_Phone" name="Primary_Phone" placeholder="Primary Phone" title="Primary Phone">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Secondary_Phone" class="col-2-12 mobile-col-2-12">Secondary Phone</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isOptional" id="Secondary_Phone" name="Secondary_Phone" placeholder="Secondary Phone" title="Secondary Phone">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Racedd" class="col-2-12 mobile-col-2-12">Race</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="Race" name="Race" title="Race">
+                    <select id="Racedd" title="Race" name="Racedd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>American Indian or Alaska Native</option>
+                        <option>Asian</option>
+                        <option>Black or African American</option>
+                        <option>Native Hawaiian or Other Pacific Islander</option>
+                        <option>White</option>
+                        <option>Other</option>
+                        <option>I do not wish to furnish this information</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Race_Other" class="col-2-12 mobile-col-2-12">Race Other</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isOptional" id="Race_Other" name="Race_Other" placeholder="Race_Other" title="Race Other">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Hispanicdd" class="col-2-12 mobile-col-2-12">Hispanic</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="Hispanic" name="Hispanic">
+                    <select id="Hispanicdd" title="Hispanic" name="Hispanicdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Marital_Statusdd" class="col-2-12 mobile-col-2-12">Marital Status</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="Marital_Status" name="Marital_Status">
+                    <select id="Marital_Statusdd" title="Marital Status" name="Marital_Statusdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Married</option>
+                        <option>Single</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+                        <option>Seperated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="Genderdd" class="col-2-12 mobile-col-2-12">Gender</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="Gender" name="Gender">
+                    <select id="Genderdd" title="Gender" name="Genderdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="col-1-1 mobile-col-1-1 infoSection-header">Co-Borrower</h2>
+        <div class="col-1-1 mobile-col-1-1 infoSection">
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Email_Address" class="col-2-12 mobile-col-2-12">Email Address</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="co_borrower_Email_Address" name="co_borrower_Email_Address" placeholder="Co-Borrower Email Address" title="Co-Borrower Email Address">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_first_name" class="col-2-12 mobile-col-2-12">First Name</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="co_borrower_first_name" name="co_borrower_first_name" placeholder="Co-Borrower First Name" title="Co-Borrower First Name">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_last_name" class="col-2-12 mobile-col-2-12">Last Name</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="co_borrower_last_name" name="co_borrower_last_name" placeholder="Co-Borrower Last Name" title="Co-Borrower Last Name">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Primary_Phone" class="col-2-12 mobile-col-2-12">Primary Phone</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isRequired" id="co_borrower_Primary_Phone" name="co_borrower_Primary_Phone" placeholder="Co-Borrower Primary Phone" title="Co-Borrower Primary Phone">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Secondary_Phone" class="col-2-12 mobile-col-2-12">Secondary Phone</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isOptional" id="co_borrower_Secondary_Phone" name="co_borrower_Secondary_Phone" placeholder="Co-Borrower Secondary Phone" title="Co-Borrower Secondary Phone">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Racedd" class="col-2-12 mobile-col-2-12">Race</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="co_borrower_Race" name="co_borrower_Race" title="Co-Borrower Race">
+                    <select id="co_borrower_Racedd" title="Co-Borrower Race" name="co_borrower_Racedd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>American Indian or Alaska Native</option>
+                        <option>Asian</option>
+                        <option>Black or African American</option>
+                        <option>Native Hawaiian or Other Pacific Islander</option>
+                        <option>White</option>
+                        <option>Other</option>
+                        <option>I do not wish to furnish this information</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Race_Other" class="col-2-12 mobile-col-2-12">Race Other</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="text" class="isOptional" id="co_borrower_Race_Other" name="co_borrower_Race_Other" placeholder="Co-Borrower Race_Other" title="Co-Borrower Race Other">
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Hispanicdd" class="col-2-12 mobile-col-2-12">Hispanic</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="co_borrower_Hispanic" name="co_borrower_Hispanic">
+                    <select id="co_borrower_Hispanicdd" title="Co-Borrower Hispanic" name="co_borrower_Hispanicdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Marital_Statusdd" class="col-2-12 mobile-col-2-12">Marital Status</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="co_borrower_Marital_Status" name="co_borrower_Marital_Status">
+                    <select id="co_borrower_Marital_Statusdd" title="Co-Borrower Marital Status" name="co_borrower_Marital_Statusdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Married</option>
+                        <option>Single</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+                        <option>Seperated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-1-1 mobile-col-1-1 row">
+                <div class="col-1-12 mobile-col-1-12"></div>
+                <label for="co_borrower_Genderdd" class="col-2-12 mobile-col-2-12">Gender</label>
+                <div class="col-8-12 mobile-col-8-12">
+                    <input type="hidden" id="co_borrower_Gender" name="co_borrower_Gender">
+                    <select id="co_borrower_Genderdd" title="Co-Borrower Gender" name="co_borrower_Genderdd" class="isRequired">
+                        <option>Select an Option</option>
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- <form role="form">
+        <div class="form-group row pnlContainer">
+            <div class="panel panel-default pnlContainer-header" tabindex="0" role="button" aria-expanded="false">Employment</div>
+            <div class="form-group row">
+                <label for="Employer" class="col-sm-2 col-form-label">Current Employer</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isRequired" id="Employer" name="Employer" placeholder="Employer" value="{{Employer}}"
+                        title="Employer">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Position" class="col-sm-2 col-form-label">Position</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptional" id="Position" name="Position" placeholder="Position" value="{{Position}}"
+                        title="Position">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Years_in_Position" class="col-sm-2 col-form-label">Years in position?</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptional" id="Years_in_Position" name="Years_in_Position" placeholder="Years in Position"
+                        value="{{Years_in_Position}}" title="Years in Position">
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group row pnlContainer">
+            <div class="panel panel-default pnlContainer-header" tabindex="0" role="button" aria-expanded="false">Borrower 2 Employment</div>
+            <div class="form-group row">
+                <label for="Co_Borrower_Employer" class="col-sm-2 col-form-label">Current Employer</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptional isOptInit REMBorrower2" id="Co_Borrower_Employer" name="Co_Borrower_Employer"
+                        placeholder="Co-Borrower Employer" value="{{Co_Borrower_Employer}}" title="Co-Borrower Employer">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Co_Borrower_Position" class="col-sm-2 col-form-label">Position</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptInitLN" id="Co_Borrower_Position" name="Co_Borrower_Position" placeholder="Co-Borrower Position"
+                        value="{{Co_Borrower_Position}}" title="Co-Borrower Position">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Co_Borrower_Years_in_Position" class="col-sm-2 col-form-label">Years in position?</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptOptional" id="Co_Borrower_Years_in_Position" name="Co_Borrower_Years_in_Position"
+                        placeholder="Co-Borrower Years in Position" value="{{Co_Borrower_Years_in_Position}}" title="Co-Borrower Years in Position">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group row pnlContainer">
+            <div class="panel panel-default pnlContainer-header" tabindex="0" role="button" aria-expanded="false">Property Information</div>
+            <div class="form-group row">
+                <label for="propertyaddress" class="col-sm-2 col-form-label">Property Address</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isRequired" id="propertyaddress" name="propertyaddress" placeholder="Property Address"
+                        value="{{propertyaddress}}" title="Address of the property to be evaluated.">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="property_city" class="col-sm-2 col-form-label">Property City</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isRequired" id="property_city" name="property_city" placeholder="Property City"
+                        value="{{property_city}}" title="Property City">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Countydd" class="col-sm-2 col-form-label">County</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="County" name="County" value="{{County}}">
+                    <select id="Countydd" title="Select County" name="Countydd" class="form-control dropdown isRequired">
+                        <option aria-label="County Dropdown - Select an Option">Select an Option</option>
+                        <option>Alcona</option>
+                        <option>Alger</option>
+                        <option>Allegan</option>
+                        <option>Alpena</option>
+                        <option>Antrim</option>
+                        <option>Arenac</option>
+                        <option>Baraga</option>
+                        <option>Barry</option>
+                        <option>Bay</option>
+                        <option>Benzie</option>
+                        <option>Berrien</option>
+                        <option>Branch</option>
+                        <option>Calhoun</option>
+                        <option>Cass</option>
+                        <option>Charlevoix</option>
+                        <option>Cheboygan</option>
+                        <option>Chippewa</option>
+                        <option>Clare</option>
+                        <option>Clinton</option>
+                        <option>Crawford</option>
+                        <option>Delta</option>
+                        <option>Dickinson</option>
+                        <option>Eaton</option>
+                        <option>Emmet</option>
+                        <option>Genesee</option>
+                        <option>Gladwin</option>
+                        <option>Gogebic</option>
+                        <option>Grand Traverse</option>
+                        <option>Gratiot</option>
+                        <option>Hillsdale</option>
+                        <option>Houghton</option>
+                        <option>Huron</option>
+                        <option>Ingham</option>
+                        <option>Ionia</option>
+                        <option>Iosco</option>
+                        <option>Iron</option>
+                        <option>Isabella</option>
+                        <option>Jackson</option>
+                        <option>Kalamazoo</option>
+                        <option>Kalkaska</option>
+                        <option>Kent</option>
+                        <option>Keweenaw</option>
+                        <option>Lake</option>
+                        <option>Lapeer</option>
+                        <option>Leelanau</option>
+                        <option>Lenawee</option>
+                        <option>Livingston</option>
+                        <option>Luce</option>
+                        <option>Mackinac</option>
+                        <option>Macomb</option>
+                        <option>Manistee</option>
+                        <option>Marquette</option>
+                        <option>Mason</option>
+                        <option>Mecosta</option>
+                        <option>Menominee</option>
+                        <option>Midland</option>
+                        <option>Missaukee</option>
+                        <option>Monroe</option>
+                        <option>Montcalm</option>
+                        <option>Montmorency</option>
+                        <option>Muskegon</option>
+                        <option>Newaygo</option>
+                        <option>Oakland</option>
+                        <option>Oceana</option>
+                        <option>Ogemaw</option>
+                        <option>Ontonagon</option>
+                        <option>Osceola</option>
+                        <option>Oscoda</option>
+                        <option>Otsego</option>
+                        <option>Ottawa</option>
+                        <option>Presque Isle</option>
+                        <option>Roscommon</option>
+                        <option>Saginaw</option>
+                        <option>Sanilac</option>
+                        <option>Schoolcraft</option>
+                        <option>Shiawassee</option>
+                        <option>St. Clair</option>
+                        <option>St. Joseph</option>
+                        <option>Tuscola</option>
+                        <option>Van Buren</option>
+                        <option>Washtenaw</option>
+                        <option>Wayne</option>
+                        <option>Wexford</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Property_Statedd" class="col-sm-2 col-form-label">Property State</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Property_State" name="Property_State" value="{{Property_State}}">
+                    <select id="Property_Statedd" title="Select Property State" name="Property_Statedd" class="form-control dropdown isRequired">
+                        <option aria-label="Property State Dropdown - Select an Option">Select an Option</option>
+                        <option>Michigan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Property_Zip" class="col-sm-2 col-form-label">Property Zip</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData zips isRequired" id="Property_Zip" name="Property_Zip" placeholder="Property Zip"
+                        value="{{Property_Zip}}" title="Property Zip">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mailing_address" class="col-sm-2 col-form-label">Mailing Address</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptional" id="mailing_address" name="mailing_address" placeholder="Mailing Address if other than Property"
+                        value="{{mailing_address}}" title="Mailing Address">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mailing_city" class="col-sm-2 col-form-label">Mailing City</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData isOptional" id="mailing_city" name="mailing_city" placeholder="Mailing City if other than Property"
+                        value="{{mailing_city}}" title="Mailing City">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mailing_statedd" class="col-sm-2 col-form-label">Mailing State</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="mailing_state" name="mailing_state" value="{{mailing_state}}">
+                    <select id="mailing_statedd" title="Select Mailing State" name="mailing_state" class="form-control dropdown isOptional">
+                        <option aria-label="Mailing State Dropdown - Select an Option">Select an Option</option>
+                        <option>Alabama</option>
+                        <option>Alaska</option>
+                        <option>Arizona</option>
+                        <option>Arkansas</option>
+                        <option>California</option>
+                        <option>Colorado</option>
+                        <option>Connecticut</option>
+                        <option>Delaware</option>
+                        <option>Florida</option>
+                        <option>Georgia</option>
+                        <option>Hawaii</option>
+                        <option>Idaho</option>
+                        <option>Illinois</option>
+                        <option>Indiana</option>
+                        <option>Iowa</option>
+                        <option>Kansas</option>
+                        <option>Kentucky</option>
+                        <option>Louisiana</option>
+                        <option>Maine</option>
+                        <option>Maryland</option>
+                        <option>Massachusetts</option>
+                        <option>Michigan</option>
+                        <option>Minnesota</option>
+                        <option>Mississippi</option>
+                        <option>Missouri</option>
+                        <option>Montana</option>
+                        <option>Nebraska</option>
+                        <option>Nevada</option>
+                        <option>New Hampshire</option>
+                        <option>New Jersey</option>
+                        <option>New Mexico</option>
+                        <option>New York</option>
+                        <option>North Carolina</option>
+                        <option>North Dakota</option>
+                        <option>Ohio</option>
+                        <option>Oklahoma</option>
+                        <option>Oregon</option>
+                        <option>Pennsylvania</option>
+                        <option>Rhode Island</option>
+                        <option>South Carolina</option>
+                        <option>South Dakota</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Utah</option>
+                        <option>Vermont</option>
+                        <option>Virginia</option>
+                        <option>Washington</option>
+                        <option>West Virginia</option>
+                        <option>Wisconsin</option>
+                        <option>Wyoming</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="mailing_zip" class="col-sm-2 col-form-label">Mailing Zip</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData zips isOptional" id="mailing_zip" name="mailing_zip" placeholder="Mailing Zip if other than Property"
+                        value="{{mailing_zip}}" title="Mailing Zip">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Municipality_Typedd" class="col-sm-2 col-form-label">Municipality Type</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Municipality_Type" name="Municipality_Type" value="{{Municipality_Type}}">
+                    <select id="Municipality_Typedd" title="Municipality Type" name="Municipality_Type" class="form-control dropdown isRequired">
+                        <option aria-label="Municipality Type Dropdown - Select an Option">Select an Option</option>
+                        <option>Village</option>
+                        <option>City</option>
+                        <option>Township</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Property_Typedd" class="col-sm-2 col-form-label">Unit Type</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Property_Type" name="Property_Type" value="{{Property_Type}}">
+                    <select id="Property_Typedd" title="Unit Type" name="Property_Typedd" class="form-control dropdown isRequired">
+                        <option aria-label="Unit Type Dropdown - Select an Option">Select an Option</option>
+                        <option>1 Unit (Single Family Residence)</option>
+                        <option>2 Units (Duplex)</option>
+                        <option>3 Units (Multi-Family Home)</option>
+                        <option>4 Units (Multi-Family Home)</option>
+                        <option>5 Units or more (Multi-Family Home)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Purchase_Date" class="col-sm-2 col-form-label">Purchase Date MM/DD/YYYY</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control inpData DatePicker isRequired" id="Purchase_Date" name="Purchase_Date" placeholder="Purchase Date"
+                        value="{{Purchase_Date}}" title="Purchase Date">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Owner_Occupieddd" class="col-sm-2 col-form-label">Owner Occupied</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Owner_Occupied" name="Owner_Occupied" value="{{Owner_Occupied}}">
+                    <select id="Owner_Occupieddd" title="Owner_Occupied" name="Owner_Occupied" class="form-control dropdown isRequired">
+                        <option aria-label="Owner Occupied Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Occupancy_Typedd" class="col-sm-2 col-form-label">Property Type</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Occupancy_Type" name="Occupancy_Type" value="{{Occupancy_Type}}">
+                    <select id="Occupancy_Typedd" title="Property Type" name="Occupancy_Typedd" class="form-control dropdown isRequired">
+                        <option aria-label="Property Type Dropdown - Select an Option">Select an Option</option>
+                        <option>Primary</option>
+                        <option>Vacation</option>
+                        <option>Investment</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Property_For_Saledd" class="col-sm-2 col-form-label">Property For Sale</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Property_For_Sale" name="Property_For_Sale" value="{{Property_For_Sale}}">
+                    <select id="Property_For_Saledd" title="Property_For_Sale" name="Property_For_Sale" class="form-control dropdown isRequired">
+                        <option aria-label="Property for Sale Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Own_Propertydd" class="col-sm-2 col-form-label">Do you own the Property?</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Own_Property" name="Own_Property" value="{{Own_Property}}">
+                    <select id="Own_Propertydd" title="Do you own the property? (Are you on the Deed and/or Title?)" name="Own_Property" class="form-control dropdown isRequired">
+                        <option aria-label="Do you own the Property Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Land_Contract_on_Propertydd" class="col-sm-2 col-form-label">Are you purchasing on a Land Contract?</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Land_Contract_on_Property" name="Land_Contract_on_Property"
+                        value="{{Land_Contract_on_Property}}">
+                    <select id="Land_Contract_on_Propertydd" title="Land_Contract_on_Property" name="Land_Contract_on_Property" class="form-control dropdown isRequired">
+                        <option aria-label="Land Contract on Property Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Seeking_Assistance_Withdd" class="col-sm-2 col-form-label">What type of delinquency are you seeking assistance with?</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Seeking_Assistance_With" name="Seeking_Assistance_With" value="{{Seeking_Assistance_With}}">
+                    <select id="Seeking_Assistance_Withdd" title="Seeking Assistance With" name="Seeking_Assistance_Withdd" class="form-control dropdown isRequired">
+                        <option aria-label="Seeking Assistance With Dropdown - Select an Option">Select an Option</option>
+                        <option>Condo Fees Only</option>
+                        <option>Mortgage Only</option>
+                        <option>Property Taxes Only</option>
+                        <option>Mortgage and Property Taxes</option>
+                        <option>Mortgage and Condo Fees</option>
+                        <option>Property Taxes and Condo Fees</option>
+                        <option>Mortgage and Property Taxes and Condo Fees</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row" style="margin-top:45px;">
+                <span class="h4Font">Mortgage</span>
+            </div>
+
+            <div class="form-group row">
+                <span class="mortSecSpan">If you have a first mortgage, please complete the following questions.</span>
+            </div>
+
+            <div class="form-group row">
+                <label for="Lender_1dd" class="col-sm-2 col-form-label">Mortgage Lender</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Loan_1_Lender" name="Loan_1_Lender" value="{{Loan_1_Lender}}">
+                    <select id="Lender_1dd" title="Lender_1" name="Loan_1_Lender" class="seekAssist1 form-control dropdown isRequired seekAssistMort"
+                        value="{{Loan_1_Lender}}">
+                        <option aria-label="Lender Dropdown - Select an Option">Select an Option</option>
+                        <option>Name Not Found</option>
+                        <option index="{{lender_ID}}">{{lender_company_name}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="loan_1_account_number" class="col-sm-2 col-form-label">Account Number</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist1 form-control inpData isRequired seekAssistMort" id="loan_1_account_number" name="loan_1_account_number"
+                        placeholder="Mortgage Account Number" value="{{loan_1_account_number}}" title="Loan 1 Account Number">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Current_on_Mortgagedd" class="col-sm-2 col-form-label">Current on Mortgage</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Current_on_Mortgage" name="Current_on_Mortgage" value="{{Current_on_Mortgage}}">
+                    <select id="Current_on_Mortgagedd" title="Current_on_Mortgage" name="Current_on_Mortgage" class="seekAssist1 form-control dropdown isRequired seekAssistMort">
+                        <option aria-label="Current on Mortgage Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Loan_1_Unpaid_Balance" class="col-sm-2 col-form-label">Delinquent Balance</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist1 form-control inpData monies isRequired seekAssistMort" id="Loan_1_Unpaid_Balance" name="Loan_1_Unpaid_Balance"
+                        placeholder="Unpaid balance of loan" value="{{Loan_1_Unpaid_Balance}}" title="Loan 1 Account Balance">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Loan_1_Monthly_Payment" class="col-sm-2 col-form-label">Monthly Payment</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist1 form-control inpData monies isRequired seekAssistMort" id="Loan_1_Monthly_Payment"
+                        name="Loan_1_Monthly_Payment" placeholder="Monthly Payment" value="{{Loan_1_Monthly_Payment}}" title="Loan 1 Monthly Payment">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Lender_1_Request_Assistancedd" class="col-sm-2 col-form-label">Do you need assistance on your first mortgage?</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Lender_1_Request_Assistance" name="Lender_1_Request_Assistance"
+                        value="{{Lender_1_Request_Assistance}}">
+                    <select id="Lender_1_Request_Assistancedd" title="Lender_1_Request_Assistance" name="Lender_1_Request_Assistance" class="seekAssist form-control dropdown isRequired seekAssistMort">
+                        <option aria-label="Lender Assistance Requested Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <span class="h4Font">Second Mortgage, Property Taxes, Condo Fees</span>
+            </div>
+
+            <div class="form-group row">
+                <span class="mortSecSpan">If you are delinquent on your second mortgage, property taxes, and/or condo fees, please complete the following
+                    questions.
+                </span>
+            </div>
+
+            <div class="form-group row">
+                <label for="Lender_2dd" class="col-sm-2 col-form-label">Lender/County/Condominium Association</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData" id="Loan_2_Lender" name="Loan_2_Lender" value="{{Loan_2_Lender}}">
+                    <select id="Lender_2dd" title="Lender_2" name="Loan_2_Lender" class="seekAssist2 form-control dropdown isRequired seekAssistPropCondo"
+                        value="{{Loan_2_Lender}}">
+                        <option aria-label="Lender 2 Dropdown - Select an Option">Select an Option</option>
+                        <option>Name Not Found</option>
+                        <option index="{{lender_ID}}">{{lender_company_name}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="loan_2_account_number" class="col-sm-2 col-form-label">Account/Property ID Number</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist2 form-control inpData isRequired seekAssistPropCondo" id="loan_2_account_number" name="loan_2_account_number"
+                        placeholder="Mortgage Account Number" value="{{loan_2_account_number}}" title="Loan 2 Account Number">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Loan_2_Unpaid_Balance" class="col-sm-2 col-form-label">Delinquent Balance</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist2 form-control inpData monies isRequired seekAssistPropCondo" id="Loan_2_Unpaid_Balance"
+                        name="Loan_2_Unpaid_Balance" placeholder="Unpaid balance of loan" value="{{Loan_2_Unpaid_Balance}}" title="Loan 2 Account Balance">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Loan_2_Monthly_Payment" class="col-sm-2 col-form-label">If property taxes, provide your estimated monthly balance.</label>
+                <div class="col-sm-9">
+                    <input type="text" class="seekAssist2 form-control inpData monies isRequired seekAssistPropCondo" id="Loan_2_Monthly_Payment"
+                        name="Loan_2_Monthly_Payment" placeholder="Monthly Payment" value="{{Loan_2_Monthly_Payment}}" title="Loan 2 Monthly Balance">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="Lender_2_Request_Assistancedd" class="col-sm-2 col-form-label">Do you need assistance on your second mortgage, property taxes, and/or condo fees?</label>
+                <div class="col-sm-9">
+                    <input type="hidden" class="form-control inpData checkbox" id="Lender_2_Request_Assistance" name="Lender_2_Request_Assistance"
+                        value="{{Lender_2_Request_Assistance}}">
+                    <select id="Lender_2_Request_Assistancedd" title="Lender_2_Request_Assistance" name="Lender_2_Request_Assistance" class="seekAssist form-control dropdown isRequired seekAssistPropCondo">
+                        <option aria-label="Lender 2 Assistance Requested Dropdown - Select an Option">Select an Option</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form> -->
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function() {
+            $("#frmData").accordion({
+                animate: 300
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+body {
+    background-color: #804B33;
+}
+
+#content {
+    margin-top: 40px;
+}
+
+.lockLink {
+    width: 100%;
+}
+
+.button {
+    border: 1px solid #240f00;
+    background: #9e6041;
+    background: -webkit-gradient(linear, left top, left bottom, from(#d68c65), to(#9e6041));
+    background: -webkit-linear-gradient(top, #d68c65, #9e6041);
+    background: -moz-linear-gradient(top, #d68c65, #9e6041);
+    background: -ms-linear-gradient(top, #d68c65, #9e6041);
+    background: -o-linear-gradient(top, #d68c65, #9e6041);
+    background-image: -ms-linear-gradient(top, #d68c65 0%, #9e6041 100%);
+    padding-top: 9.5px;
+    padding-bottom: 9.5px;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+    box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+    text-shadow: #947762 0 1px 0;
+    color: #421a00;
+    font-size: 20px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.button:hover {
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #000000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+    background: -webkit-linear-gradient(top, #000000, #000000);
+    background: -moz-linear-gradient(top, #000000, #000000);
+    background: -ms-linear-gradient(top, #000000, #000000);
+    background: -o-linear-gradient(top, #000000, #000000);
+    background-image: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+    color: #33ff00;
+}
+
+.button:active {
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #000000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#000000));
+    background: -webkit-linear-gradient(top, #000000, #000000);
+    background: -moz-linear-gradient(top, #000000, #000000);
+    background: -ms-linear-gradient(top, #000000, #000000);
+    background: -o-linear-gradient(top, #000000, #000000);
+    background-image: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+    color: #ff0000;
+}
+
+.button {
+    float: left;
+    width: 70%;
+    margin-left: auto;
+    margin-left: 59.35px;
+    margin-right: 59.35px;
+}

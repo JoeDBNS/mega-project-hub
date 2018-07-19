@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(92, 92, 94);
+}
+
+#container {
+    width: 780px;
+    height: 800px;
+    margin: auto;
+    padding-top: 80px;
+}
+
+#linkHome {
+    background-color: rgb(131, 33, 33);
+    color: rgb(16, 4, 68);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    width: 48px;
+    height: 24px;
+    position: fixed;
+    padding: 1px 4px 3px 4px;
+    border: 2px groove rgb(16, 4, 68);
+    border-radius: 5px;
+}
+
+.content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 4px;
+    width: 200px;
+    background: rgb(131, 33, 33);
+    border: 2px solid black;
+    border-radius: 10px;
+    color: rgb(16, 4, 68);
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 22px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+}

@@ -1,0 +1,96 @@
+<!--==================================================
+
+Date: 09-25-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Can I ASCII You A Question?</title>
+
+<!-- JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refLock1.css">
+</head>
+<body>
+    <div id="container">
+		<a id="linkHome" href="TurkeyQuest.html">Home</a>
+		<div id="row1" class="row">
+			<div id="numDisp1" class="numDisp"><span id="numDispSpan1" class="numDispSpan">0</span></div>
+			<div id="numDisp2" class="numDisp row1AddMargin"><span id="numDispSpan2" class="numDispSpan">0</span></div>
+			<div id="numDisp3" class="numDisp row1AddMargin"><span id="numDispSpan3" class="numDispSpan">0</span></div>
+			<div id="numDisp4" class="numDisp row1AddMargin"><span id="numDispSpan4" class="numDispSpan">0</span></div>
+			<div id="numDisp5" class="numDisp row1AddMargin"><span id="numDispSpan5" class="numDispSpan">0</span></div>
+			<div id="numDisp6" class="numDisp row1AddMargin"><span id="numDispSpan6" class="numDispSpan">0</span></div>
+		</div>
+		<div id="row2" class="row">
+			<div id="numChk1" class="numChk">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+			<div id="numChk2" class="numChk row2AddMargin">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+			<div id="numChk3" class="numChk row2AddMargin">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+			<div id="numChk4" class="numChk row2AddMargin">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+			<div id="numChk5" class="numChk row2AddMargin">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+			<div id="numChk6" class="numChk row2AddMargin">
+				<div class="switch demo2">
+					<input class="chkBoxInp" type="checkbox">
+					<label></label>
+				</div>
+			</div>
+		</div>
+		<div hidden>&amp;</div>
+		<div id="btnDiv"><center id="btnTag"><input id="btnCheck" type="button" value="Check"></center></div>
+		<div id="txtDiv">
+			<center>54 68 65 20 4b 65 79 20 49 73 20 48 69 64 64 65 6e</center>
+		</div>
+	</div>
+	
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+			authDomain: "turkey-hunt.firebaseapp.com",
+			databaseURL: "https://turkey-hunt.firebaseio.com",
+			projectId: "turkey-hunt",
+			storageBucket: "turkey-hunt.appspot.com",
+			messagingSenderId: "976430422621"
+		};
+		firebase.initializeApp(config);
+	</script>
+	
+<!-- JS File -->
+	<script type="text/javascript" src="js/refLock1.js"></script>
+</body>
+</html>

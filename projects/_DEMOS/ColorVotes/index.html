@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ColorVotes</title>
+
+<!-- Import jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Import Google Charts -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refColorVotes.css">
+</head>
+
+<body>
+	<div id="container" aria-role="Main">
+		<header class="frstLevelSec">
+			<h1 id="headerText">Which Color Is The <span id="b">B</span><span id="e">e</span><span id="s">s</span><span id="t">t</span> Color?</h1>
+		</header>
+
+		<div id="divChart" class="frstLevelSec">
+			<div id="chart_div"></div>
+		</div>
+
+		<div id="divColorButtons" class="frstLevelSec">
+			<h3 id="btnColorHeader">Vote:</h3>
+			<div id="btnRed" class="btnColor btnLeft btnTop"></div>
+			<div id="btnBlue" class="btnColor btnRight btnTop"></div>
+			<div id="btnGreen" class="btnColor btnLeft btnBot"></div>
+			<div id="btnYellow" class="btnColor btnRight btnBot"></div>
+		</div>
+	</div>
+
+	<center hidden>modal</center>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBjEUge3tm-lr8utgOx3PqX7fIjs-SVKFo",
+			authDomain: "mad-final-project.firebaseapp.com",
+			databaseURL: "https://mad-final-project.firebaseio.com",
+			projectId: "mad-final-project",
+			storageBucket: "mad-final-project.appspot.com",
+			messagingSenderId: "1088023104418"
+		};
+		firebase.initializeApp(config);
+	</script>
+	
+<!-- JS File -->
+	<script type="text/javascript" src="js/refColorVotes.js"></script>
+</body>
+</html>

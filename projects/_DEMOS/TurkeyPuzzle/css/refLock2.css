@@ -1,0 +1,115 @@
+body {
+	background-color: rgb(92, 92, 94);
+	font-family: Arial;
+}
+
+#container {
+	width: 680px;
+	height: 800px;
+	margin: auto;
+	padding-top: 60px;
+}
+
+#linkHome {
+	background-color: rgb(131, 33, 33);
+	color: rgb(16,4,68);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	width: 48px;
+	height: 24px;
+	position: fixed;
+	padding: 1px 4px 3px 4px;
+	border: 2px	groove rgb(16,4,68);
+	border-radius: 5px;
+}
+
+#txtContent {
+	font-size: 16px;
+	float: left;
+	width: 100%;
+	margin-top: 80px;
+	margin-bottom: 40px;
+}
+
+#txtContent p {
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+#numContent {
+	float: left;
+	width: 100%;
+	margin-top: 60px;
+	text-align: center;
+}
+
+#numContent span {
+	text-align: center;
+}
+
+#contentTable1 {
+	border: 4px ridge brown;
+	background-color: white;
+	padding: 40px 10px 40px 10px;
+    width: 100%;
+    height: 200px;
+}
+
+#content2 {
+	border: 4px ridge brown;
+	background-color: white;
+	width: 100%;
+	padding: 30px;
+	font-size: 20px;
+}
+
+#subContent {
+	float: left;
+	margin-top: 100px;
+	width: 100%;
+	height: 40px;
+}
+
+.answerNum {
+	font-size: 30px;
+	display: inline-block;
+	height: 40px;
+	width: 6%;
+}
+
+#topInput {
+	margin-left: 33%;
+}
+
+#midInput {
+	margin-left: 6%;
+	margin-right: 6%;
+}
+
+#botInput {
+	margin-right: 33%;
+}
+
+#btnDiv {
+	float: left;
+	width: 100%;
+	height: 100px;
+	margin-top: 50px;
+}
+
+#btnCheck {
+    width: 100px;
+	background: rgb(131, 33, 33);
+    border-radius: 10px;
+	border-color: rgb(16,4,68);
+    color: rgb(16,4,68);
+    cursor: pointer;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 22px;
+    height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    user-select: none;
+}

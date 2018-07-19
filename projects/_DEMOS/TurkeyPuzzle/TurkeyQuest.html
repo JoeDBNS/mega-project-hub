@@ -1,0 +1,91 @@
+<!--==================================================
+
+Date: 09-20-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!-- https://console.firebase.google.com/project/turkey-hunt/database/data/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Gobble Status</title>
+
+	<!-- Shake -->
+		<link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
+
+	<!-- SimpleGrid -->
+		<link rel="stylesheet" type="text/css" href="css/simplegrid.css">
+
+	<!-- CSS File -->
+		<link rel="stylesheet" type="text/css" href="css/refTurkey.css">
+</head>
+<body>
+	<div id="content" class="grid">
+		<div class="col-1-5 mobile-col-1-2">
+			<a id="aLock1">
+				<img id="imgLock1" class="shake-slow shake-freeze" src="Images/lock_Locked.png" alt="Turkey Lock" width="170px" height="243px">
+			</a>
+			<p>"Can I ASCII You A Question?"</p>
+		</div>
+
+		<div class="col-1-5 hide-on-mobile"></div>
+
+		<div class="col-1-5 mobile-col-1-2">
+			<a id="aLock2">
+				<img id="imgLock2" class="shake-slow shake-freeze" src="Images/lock_Locked.png" alt="Turkey Lock" width="170px" height="243px">
+			</a>
+			<p>"It's Just Math."</p>
+		</div>
+		
+		<div class="col-1-5 hide-on-mobile"></div>
+
+		<div class="col-1-5 mobile-col-1-2">
+			<a id="aLock3">
+				<img id="imgLock3" class="shake-slow shake-freeze" src="Images/lock_Locked.png" alt="Turkey Lock" width="170px" height="243px">
+			</a>
+			<p>"I Don't Give A Flip!"</p>
+		</div>
+
+		<div class="col-1-5 mobile-col-1-2">
+			<a id="aLock4">
+				<img id="imgLock4" class="shake-slow shake-freeze" src="Images/lock_Locked.png" alt="Turkey Lock" width="170px" height="243px">
+			</a>
+			<p>"Double Trouble"</p>
+		</div>
+		
+		<div class="col-1-5 hide-on-mobile"></div>
+
+		<div class="col-1-5 mobile-col-1-2">
+			<a id="aLock5">
+				<img id="imgLock5" class="shake-slow shake-freeze" src="Images/lock_Locked.png" alt="Turkey Lock" width="170px" height="243px">
+			</a>
+			<p>"FIN"</p>
+		</div>
+	</div>
+
+<!-- JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+		authDomain: "turkey-hunt.firebaseapp.com",
+		databaseURL: "https://turkey-hunt.firebaseio.com",
+		projectId: "turkey-hunt",
+		storageBucket: "turkey-hunt.appspot.com",
+		messagingSenderId: "976430422621"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refTurkey.js"></script>
+</body>
+  
+</html>

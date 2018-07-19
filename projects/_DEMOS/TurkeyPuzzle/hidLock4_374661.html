@@ -1,0 +1,51 @@
+<!--==================================================
+
+Date: 09-25-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Double Trouble</title>
+
+<!-- JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refLock4.css">
+</head>
+<body>
+	<div id="container">
+		<a id="linkHome" href="TurkeyQuest.html">Home</a>
+
+		<div id="content1" class="content">
+			<h1 id="delete">You Must First Complete Puzzles 1, 2, & 3.</h1>
+			
+			<a id="btnDown" class="btn" download="Play_With_Sound">Download</a>
+		</div>
+	</div>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+		authDomain: "turkey-hunt.firebaseapp.com",
+		databaseURL: "https://turkey-hunt.firebaseio.com",
+		projectId: "turkey-hunt",
+		storageBucket: "turkey-hunt.appspot.com",
+		messagingSenderId: "976430422621"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refLock4.js"></script>
+</body>
+</html>

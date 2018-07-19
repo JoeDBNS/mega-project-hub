@@ -1,0 +1,71 @@
+<!--==================================================
+
+Date: 09-25-2017
+Author: Turk Key
+Project: Where's Jake's Turkey
+
+===================================================-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>I Don't Give A Flip!</title>
+
+<!-- JQuery -->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<!-- CSS File -->
+	<link rel="stylesheet" type="text/css" href="css/refLock3.css">
+</head>
+<body>
+	<div id="container">
+		<a id="linkHome" href="TurkeyQuest.html">Home</a>
+
+		<div id="content">
+			<div class="imageRow">
+				<a href="files/music/Track1.wav" download="Track1">
+					<img id="imgDown1" src="Images/download.png" alt="Download 1">
+				</a>
+
+				<a href="files/music/Track2.wav" download="Track2">
+					<img id="imgDown2" src="Images/download.png" alt="Download 2">
+				</a>
+
+				<a href="files/music/Track3.wav" download="Track3">
+					<img id="imgDown3" src="Images/download.png" alt="Download 3">
+				</a>
+			</div>
+			<div class="inputRow">
+				<input id="inpDown1" class="inputs" name="inpDown1" type="password" placeholder="File_1">
+				<input id="inpDown2" class="inputs" name="inpDown2" type="password" placeholder="File_2">
+				<input id="inpDown3" class="inputs" name="inpDown3" type="password" placeholder="File_3">
+			</div>
+		</div>
+		<div id="btnDiv">
+			<center id="btnTag">
+				<input id="btnCheck" type="button" value="Check">
+			</center>
+		</div>
+	</div>
+
+<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script>
+	// Initialize Firebase
+	var config = {
+		apiKey: "AIzaSyATgM2vSIjs3N8g8nTYpYuHorWsUveD6yo",
+		authDomain: "turkey-hunt.firebaseapp.com",
+		databaseURL: "https://turkey-hunt.firebaseio.com",
+		projectId: "turkey-hunt",
+		storageBucket: "turkey-hunt.appspot.com",
+		messagingSenderId: "976430422621"
+	};
+	firebase.initializeApp(config);
+	</script>
+
+<!-- JS File -->
+	<script type="text/javascript" src="js/refLock3.js"></script>
+</body>
+</html>

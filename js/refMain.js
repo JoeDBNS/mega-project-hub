@@ -13,24 +13,7 @@ Project: mega-project-hub
 			session: {
 				date: GetTodayDate(),
 				showComputerScreen: 0,
-				selectedProject: {
-					name: "Placeholder",
-					folder: 'projects/Placeholder/index.html',
-					color: '',
-					features: [
-						"JavaScript",
-						"Vue.js",
-						"JSON"
-					]
-				},
-				showFolderInfo: 0,
-				selectedWork: {
-					employer: "State of Michigan",
-					department: 'DTMB - Agency Services',
-					dateBegin: 'Mar 2017',
-					dateEnd: 'Present',
-					title: 'Web and Software Developer'
-				},
+				selectedProject: {},
 				selectedSkill: {
 					name: null,
 					link: null
@@ -38,60 +21,137 @@ Project: mega-project-hub
 			},
 			Projects: [
 				{
-					name: "Terminal Website",
+					name: 'Placeholder',
+					about: 'This is a placeholder project.',
+					folderDemo: 'projects/_DEMOS/Placeholder/index.html',
+					folder: 'projects/Placeholder/index.html',
+					date: 'Jul 2018 - Aug 2018',
+					color: '',
+					features: [
+						'test01',
+						'test02',
+						'test03',
+						'test04'
+					],
+					screenshots: [
+						{ file: 'projects/Placeholder/_screens/shot1.png' },
+						{ file: 'projects/Placeholder/_screens/shot2.png' },
+						{ file: 'projects/Placeholder/_screens/shot3.png' }
+					]
+				},
+				{
+					name: 'Terminal Website',
+					about: '',
+					folderDemo: 'projects/_DEMOS/TerminalWebsite/index.html',
 					folder: 'projects/TerminalWebsite/index.html',
+					date: 'Jan 2018 - May 2018',
 					color: '',
 					features: [
-						"JavaScript",
-						"Vue.js",
-						"JSON"
+						'JavaScript',
+						'Vue.js',
+						'JSON'
+					],
+					screenshots: [
+						{ file: 'projects/TerminalWebsite/_screens/shot1.png' },
+						{ file: 'projects/TerminalWebsite/_screens/shot2.png' },
+						{ file: 'projects/TerminalWebsite/_screens/shot3.png' }
 					]
 				},
 				{
-					name: "Michigan Gun Shows",
+					name: 'Michigan Gun Shows',
+					about: '',
+					folderDemo: 'projects/_DEMOS/MiGunShows/index.html',
 					folder: 'projects/MiGunShows/index.html',
+					date: 'Feb 2018 - May 2018',
 					color: '',
 					features: [
-						"Vue.js",
-						"Firebase",
-						"SimpleGrid",
-						"Responsive Design"
+						'Vue.js',
+						'Firebase',
+						'SimpleGrid',
+						'Responsive Design'
+					],
+					screenshots: [
+						{ file: 'projects/MiGunShows/_screens/shot1.png' },
+						{ file: 'projects/MiGunShows/_screens/shot2.png' },
+						{ file: 'projects/MiGunShows/_screens/shot3.png' }
 					]
 				},
 				{
-					name: "StepForward Michigan",
+					name: 'StepForward Michigan',
+					about: '',
+					folderDemo: 'projects/_DEMOS/StepForward/index.html',
 					folder: 'projects/StepForward/index.html',
+					date: 'Jan 2018 - Apr 2018',
 					color: '',
 					features: [
-						"JavaScript",
-						"Responsive Design",
-						"Formatted Printing"
+						'JavaScript',
+						'Responsive Design',
+						'Formatted Printing'
+					],
+					screenshots: [
+						{ file: 'projects/StepForward/_screens/shot1.png' },
+						{ file: 'projects/StepForward/_screens/shot2.png' },
+						{ file: 'projects/StepForward/_screens/shot3.png' }
 					]
 				},
 				{
-					name: "TinyMCE Letters",
+					name: 'TinyMCE Letters',
+					about: '',
+					folderDemo: 'projects/_DEMOS/TinyMCE/index.html',
 					folder: 'projects/TinyMCE/index.html',
+					date: 'Oct 2017 - Nov 2017',
 					color: '',
 					features: [
-						"JavaScript",
-						"TinyMCE",
-						"Formatted Printing"
+						'JavaScript',
+						'TinyMCE',
+						'Formatted Printing'
+					],
+					screenshots: [
+						{ file: 'projects/TinyMCE/_screens/shot1.png' },
+						{ file: 'projects/TinyMCE/_screens/shot2.png' },
+						{ file: 'projects/TinyMCE/_screens/shot3.png' }
 					]
 				},
 				{
-					name: "ColorVoter",
+					name: 'ColorVoter',
+					about: '',
+					folderDemo: 'projects/_DEMOS/ColorVotes/index.html',
 					folder: 'projects/ColorVotes/index.html',
+					date: 'Nov 2017 - Dec 2017',
 					color: '',
 					features: [
-						"JavaScript",
-						"Firebase",
-						"Game"
+						'JavaScript',
+						'Firebase',
+						'Game'
+					],
+					screenshots: [
+						{ file: 'projects/ColorVotes/_screens/shot1.png' },
+						{ file: 'projects/ColorVotes/_screens/shot2.png' },
+						{ file: 'projects/ColorVotes/_screens/shot3.png' }
+					]
+				},
+				{
+					name: 'Turkey Puzzle',
+					about: '',
+					folderDemo: 'projects/_DEMOS/TurkeyPuzzle/TurkeyQuest.html',
+					folder: 'projects/TurkeyPuzzle/index.html',
+					date: 'Mar 2017 - May 2017',
+					color: '',
+					features: [
+						'JavaScript',
+						'Firebase',
+						'Game'
+					],
+					screenshots: [
+						{ file: 'projects/TurkeyPuzzle/_screens/shot1.png' },
+						{ file: 'projects/TurkeyPuzzle/_screens/shot2.png' },
+						{ file: 'projects/TurkeyPuzzle/_screens/shot3.png' }
 					]
 				}
 			],
 			Jobs: [
 				{
-					employer: "State of Michigan",
+					employer: 'State of Michigan',
 					department: 'DTMB - Agency Services',
 					title: 'Web and Software Developer',
 					dateBegin: 'Mar 2017',
@@ -104,7 +164,7 @@ Project: mega-project-hub
 					}
 				},
 				{
-					employer: "Eaton County",
+					employer: 'Eaton County',
 					department: 'Technology Services',
 					title: 'Computer Technician Intern',
 					dateBegin: 'Oct 2016',
@@ -117,7 +177,7 @@ Project: mega-project-hub
 					}
 				},
 				{
-					employer: "State of Michigan",
+					employer: 'State of Michigan',
 					department: 'DTMB - Design & Delivery',
 					title: 'IT Student Assistant',
 					dateBegin: 'Nov 2015',
@@ -130,7 +190,7 @@ Project: mega-project-hub
 					}
 				},
 				{
-					employer: "Best Buy",
+					employer: 'Best Buy',
 					department: 'Computer Dept.',
 					title: 'Sales Consultant',
 					dateBegin: 'Mar 2015',
@@ -143,7 +203,7 @@ Project: mega-project-hub
 					}
 				},
 				{
-					employer: "Advanced Rheumatology",
+					employer: 'Advanced Rheumatology',
 					department: 'IT Support',
 					title: 'Computer and Data Technician',
 					dateBegin: '___ 201_',
@@ -156,7 +216,7 @@ Project: mega-project-hub
 					}
 				},
 				{
-					employer: "Charlotte High School",
+					employer: 'Charlotte High School',
 					department: 'IT Dept.',
 					title: 'Computer Technician Intern',
 					dateBegin: '___ 201_',
@@ -301,10 +361,10 @@ Project: mega-project-hub
 				});
 			},
 			CheckSkill: function(event, skill) {
-				if ($("#skillBox").hasClass("skillBoxFull")) {
+				if ($('#skillBox').hasClass('skillBoxFull')) {
 					this.session.selectedSkill = skill;
-					$("#fridgeOpen").show();
-					$("#skillDisplay").show();
+					$('#fridgeOpen').show();
+					$('#skillDisplay').show();
 				}
 				else {
 					this.session.selectedSkill = { name: null, link: null }
@@ -316,44 +376,44 @@ Project: mega-project-hub
 // For Vue Values
 	function GetTodayDate() {
 		var date = new Date();
-		var dateFormat = date.getMonth().toString() + "-" + (date.getDay() + 1).toString() + "-" + date.getFullYear().toString();
+		var dateFormat = date.getMonth().toString() + '-' + (date.getDay() + 1).toString() + '-' + date.getFullYear().toString();
 		return dateFormat;
 	}
 	function GetTransformValue() {
 		var nVal = Math.floor((Math.random() * 2) + 1);
 		var tVal = Math.floor((Math.random() * 6) + 1);
 		if (nVal == 1)
-			var tString = "rotate(-" + tVal + "deg)"
+			var tString = 'rotate(-' + tVal + 'deg)'
 		else
-			var tString = "rotate(" + tVal + "deg)"
+			var tString = 'rotate(' + tVal + 'deg)'
 		return tString;
 	}
 	function GetFridgeMagnets() {
-		var elmWidth = document.getElementById("fridge").offsetWidth/2;
-		var elmWidthCount = (elmWidth/40).toString().split(".")[0] - 2;
+		var elmWidth = document.getElementById('fridge').offsetWidth/2;
+		var elmWidthCount = (elmWidth / 40).toString().split('.')[0] - 2;
 		var xPos = Math.floor((Math.random() * elmWidthCount) + 1);
-		return ((40 * xPos).toString() + "px");
+		return ((40 * xPos).toString() + 'px');
 	}
 
 // OnLoad Run
 	$(function() {
-		$(".fridgeImage").draggable({
+		$('.fridgeImage').draggable({
 			drag: function() {
 				if ((Math.abs(parseInt(this.style.left) - 58) < 18) && (Math.abs(-parseInt(this.style.top) - 104) < 24)) {
-					document.getElementById("skillBox").classList.remove("skillBoxEmpty");
-					document.getElementById("skillBox").classList.add("skillBoxFull");
+					document.getElementById('skillBox').classList.remove('skillBoxEmpty');
+					document.getElementById('skillBox').classList.add('skillBoxFull');
 				}
 				else if ((Math.abs(-parseInt(this.style.left) - 228) < 18) && (Math.abs(-parseInt(this.style.top) - 103) < 24)) {
-					document.getElementById("skillBox").classList.remove("skillBoxEmpty");
-					document.getElementById("skillBox").classList.add("skillBoxFull");
+					document.getElementById('skillBox').classList.remove('skillBoxEmpty');
+					document.getElementById('skillBox').classList.add('skillBoxFull');
 				}
 				else {
-					document.getElementById("skillBox").classList.remove("skillBoxFull");
-					document.getElementById("skillBox").classList.add("skillBoxEmpty");
-					$("#fridgeOpen").hide();
-					$("#skillDisplay").hide();
+					document.getElementById('skillBox').classList.remove('skillBoxFull');
+					document.getElementById('skillBox').classList.add('skillBoxEmpty');
+					$('#fridgeOpen').hide();
+					$('#skillDisplay').hide();
 				}
 			}
 		});
-		$(".letter").draggable();
+		$('.letter').draggable();
 	});
