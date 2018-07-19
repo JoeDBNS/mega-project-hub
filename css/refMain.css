@@ -121,7 +121,7 @@ body {
 			width: 100%;
 			height: 100%;
 		}
-		/* #screenContainer {
+		#screenContainer {
 			background-color: white;
 			padding: 8px;
 			min-height: 100%;
@@ -168,7 +168,7 @@ body {
 		}
 		#screenContent .screenshot p {
 			padding-left: 30px;
-		} */
+		}
 		#deskComputer .stand {
 			margin: auto;
 			margin-top: 1px;
